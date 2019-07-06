@@ -1,0 +1,1840 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EFModelStoreContainer" CdmEntityContainer="EFEntities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="EFModel.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_DatabaseLog">
+      <EntityTypeMapping TypeName="EFModel.C_DatabaseLog">
+        <MappingFragment StoreEntitySet="_DatabaseLog">
+          <ScalarProperty Name="IsLogSucceeded" ColumnName="IsLogSucceeded" />
+          <ScalarProperty Name="ExecutedOnDate" ColumnName="ExecutedOnDate" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="XmlEvent" ColumnName="XmlEvent" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="TSQL" ColumnName="TSQL" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="Schema" ColumnName="Schema" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="DatabaseUser" ColumnName="DatabaseUser" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="DatabaseLogId" ColumnName="DatabaseLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccessLists">
+      <EntityTypeMapping TypeName="EFModel.AccessList">
+        <MappingFragment StoreEntitySet="AccessList">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="ViewOrder" ColumnName="ViewOrder" />
+          <ScalarProperty Name="AccessName" ColumnName="AccessName" />
+          <ScalarProperty Name="AccessKey" ColumnName="AccessKey" />
+          <ScalarProperty Name="AccessType" ColumnName="AccessType" />
+          <ScalarProperty Name="AccessID" ColumnName="AccessID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Applications">
+      <EntityTypeMapping TypeName="EFModel.aspnet_Applications">
+        <MappingFragment StoreEntitySet="aspnet_Applications">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Membership">
+      <EntityTypeMapping TypeName="EFModel.aspnet_Membership">
+        <MappingFragment StoreEntitySet="aspnet_Membership">
+          <ScalarProperty Name="CmsSiteSiteId" ColumnName="CmsSiteSiteId" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="OtherEmail" ColumnName="OtherEmail" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Organizations">
+      <EntityTypeMapping TypeName="EFModel.aspnet_Organizations">
+        <MappingFragment StoreEntitySet="aspnet_Organizations">
+          <ScalarProperty Name="HasChild" ColumnName="HasChild" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="IdPath" ColumnName="IdPath" />
+          <ScalarProperty Name="Loai" ColumnName="Loai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ThuTu" ColumnName="ThuTu" />
+          <ScalarProperty Name="IsPublic" ColumnName="IsPublic" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+          <ScalarProperty Name="ParentOrganizationID" ColumnName="ParentOrganizationID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Paths">
+      <EntityTypeMapping TypeName="EFModel.aspnet_Paths">
+        <MappingFragment StoreEntitySet="aspnet_Paths">
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+      <EntityTypeMapping TypeName="EFModel.aspnet_PersonalizationAllUsers">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+      <EntityTypeMapping TypeName="EFModel.aspnet_PersonalizationPerUser">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Profile">
+      <EntityTypeMapping TypeName="EFModel.aspnet_Profile">
+        <MappingFragment StoreEntitySet="aspnet_Profile">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Roles">
+      <EntityTypeMapping TypeName="EFModel.aspnet_Roles">
+        <MappingFragment StoreEntitySet="aspnet_Roles">
+          <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="EnableDelete" ColumnName="EnableDelete" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Roles_Scheme_Relationships">
+      <EntityTypeMapping TypeName="EFModel.aspnet_Roles_Scheme_Relationships">
+        <MappingFragment StoreEntitySet="aspnet_Roles_Scheme_Relationships">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="RolesName" ColumnName="RolesName" />
+          <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+          <ScalarProperty Name="SchemeCode" ColumnName="SchemeCode" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_RolesInOrganization">
+      <EntityTypeMapping TypeName="EFModel.aspnet_RolesInOrganization">
+        <MappingFragment StoreEntitySet="aspnet_RolesInOrganization">
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_SchemaVersions">
+      <EntityTypeMapping TypeName="EFModel.aspnet_SchemaVersions">
+        <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+          <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+          <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Users">
+      <EntityTypeMapping TypeName="EFModel.aspnet_Users">
+        <MappingFragment StoreEntitySet="aspnet_Users">
+          <ScalarProperty Name="CmsSiteSiteId" ColumnName="CmsSiteSiteId" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_UsersInOrganization">
+      <EntityTypeMapping TypeName="EFModel.aspnet_UsersInOrganization">
+        <MappingFragment StoreEntitySet="aspnet_UsersInOrganization">
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_UsersInRoles">
+      <EntityTypeMapping TypeName="EFModel.aspnet_UsersInRoles">
+        <MappingFragment StoreEntitySet="aspnet_UsersInRoles">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_WebEvent_Events">
+      <EntityTypeMapping TypeName="EFModel.aspnet_WebEvent_Events">
+        <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+          <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+          <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bsd_System_Tracking">
+      <EntityTypeMapping TypeName="EFModel.bsd_System_Tracking">
+        <MappingFragment StoreEntitySet="bsd_System_Tracking">
+          <ScalarProperty Name="TrackingZone" ColumnName="TrackingZone" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="LoggedOnDate" ColumnName="LoggedOnDate" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Catalog_Field">
+      <EntityTypeMapping TypeName="EFModel.Catalog_Field">
+        <MappingFragment StoreEntitySet="Catalog_Field">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="fieldName_New" ColumnName="fieldName_New" />
+          <ScalarProperty Name="CatalogCode" ColumnName="CatalogCode" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="FieldWidth" ColumnName="FieldWidth" />
+          <ScalarProperty Name="CatalogMasterId" ColumnName="CatalogMasterId" />
+          <ScalarProperty Name="DisplayReaderSearch" ColumnName="DisplayReaderSearch" />
+          <ScalarProperty Name="DisplayReportSearch" ColumnName="DisplayReportSearch" />
+          <ScalarProperty Name="DisplayReader" ColumnName="DisplayReader" />
+          <ScalarProperty Name="DisplayReport" ColumnName="DisplayReport" />
+          <ScalarProperty Name="DisplayCatalog" ColumnName="DisplayCatalog" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="IsDocumentCommonField" ColumnName="IsDocumentCommonField" />
+          <ScalarProperty Name="IsRecordCommonField" ColumnName="IsRecordCommonField" />
+          <ScalarProperty Name="FormlyContent" ColumnName="FormlyContent" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FieldId" ColumnName="FieldId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Catalog_Item">
+      <EntityTypeMapping TypeName="EFModel.Catalog_Item">
+        <MappingFragment StoreEntitySet="Catalog_Item">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MappedTermId" ColumnName="MappedTermId" />
+          <ScalarProperty Name="CatalogItemId" ColumnName="CatalogItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Catalog_Item_Attribute">
+      <EntityTypeMapping TypeName="EFModel.Catalog_Item_Attribute">
+        <MappingFragment StoreEntitySet="Catalog_Item_Attribute">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="TypeDateTime" ColumnName="TypeDateTime" />
+          <ScalarProperty Name="MonthValue" ColumnName="MonthValue" />
+          <ScalarProperty Name="YearValue" ColumnName="YearValue" />
+          <ScalarProperty Name="DateValue" ColumnName="DateValue" />
+          <ScalarProperty Name="TimeValue" ColumnName="TimeValue" />
+          <ScalarProperty Name="JsonGuidValue" ColumnName="JsonGuidValue" />
+          <ScalarProperty Name="JsonValue" ColumnName="JsonValue" />
+          <ScalarProperty Name="MetadataFieldCode" ColumnName="MetadataFieldCode" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="GuidValue" ColumnName="GuidValue" />
+          <ScalarProperty Name="VarcharValue" ColumnName="VarcharValue" />
+          <ScalarProperty Name="BitValue" ColumnName="BitValue" />
+          <ScalarProperty Name="DatetimeValue" ColumnName="DatetimeValue" />
+          <ScalarProperty Name="IntValue" ColumnName="IntValue" />
+          <ScalarProperty Name="NvarcharValue" ColumnName="NvarcharValue" />
+          <ScalarProperty Name="MetadataFieldName" ColumnName="MetadataFieldName" />
+          <ScalarProperty Name="MetadataFieldId" ColumnName="MetadataFieldId" />
+          <ScalarProperty Name="CatalogItemId" ColumnName="CatalogItemId" />
+          <ScalarProperty Name="CatalogItemAttributeId" ColumnName="CatalogItemAttributeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Catalog_Master">
+      <EntityTypeMapping TypeName="EFModel.Catalog_Master">
+        <MappingFragment StoreEntitySet="Catalog_Master">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MappedVocabularyId" ColumnName="MappedVocabularyId" />
+          <ScalarProperty Name="MappedTermId" ColumnName="MappedTermId" />
+          <ScalarProperty Name="MetadataTemplateId" ColumnName="MetadataTemplateId" />
+          <ScalarProperty Name="CatalogMasterId" ColumnName="CatalogMasterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificates">
+      <EntityTypeMapping TypeName="EFModel.Certificate">
+        <MappingFragment StoreEntitySet="Certificates">
+          <ScalarProperty Name="HsmAlias" ColumnName="HsmAlias" />
+          <ScalarProperty Name="CertType" ColumnName="CertType" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="OrganizationCA" ColumnName="OrganizationCA" />
+          <ScalarProperty Name="OwnCA" ColumnName="OwnCA" />
+          <ScalarProperty Name="Used" ColumnName="Used" />
+          <ScalarProperty Name="Cert" ColumnName="Cert" />
+          <ScalarProperty Name="SerialCert" ColumnName="SerialCert" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="CertificateId" ColumnName="CertificateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cms_Site">
+      <EntityTypeMapping TypeName="EFModel.cms_Site">
+        <MappingFragment StoreEntitySet="cms_Site">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IISSiteName" ColumnName="IISSiteName" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="DefaultAddress" ColumnName="DefaultAddress" />
+          <ScalarProperty Name="IsHosted" ColumnName="IsHosted" />
+          <ScalarProperty Name="HostingErrorMessage" ColumnName="HostingErrorMessage" />
+          <ScalarProperty Name="DefaultDocument" ColumnName="DefaultDocument" />
+          <ScalarProperty Name="PhysicalPath" ColumnName="PhysicalPath" />
+          <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cms_SiteBinding">
+      <EntityTypeMapping TypeName="EFModel.cms_SiteBinding">
+        <MappingFragment StoreEntitySet="cms_SiteBinding">
+          <ScalarProperty Name="TypeProtocol" ColumnName="TypeProtocol" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="HostName" ColumnName="HostName" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comp_InvCat_InvTemp">
+      <EntityTypeMapping TypeName="EFModel.Comp_InvCat_InvTemp">
+        <MappingFragment StoreEntitySet="Comp_InvCat_InvTemp">
+          <ScalarProperty Name="IsCertify" ColumnName="IsCertify" />
+          <ScalarProperty Name="InvoiceTemplateId" ColumnName="InvoiceTemplateId" />
+          <ScalarProperty Name="InvoiceCategoryId" ColumnName="InvoiceCategoryId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="EFModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="DatePoint" ColumnName="DatePoint" />
+          <ScalarProperty Name="SignType" ColumnName="SignType" />
+          <ScalarProperty Name="IsUsed" ColumnName="IsUsed" />
+          <ScalarProperty Name="PortalLink" ColumnName="PortalLink" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="MailContact" ColumnName="MailContact" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Domain" ColumnName="Domain" />
+          <ScalarProperty Name="SignatureImage" ColumnName="SignatureImage" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="TaxAuthorityId" ColumnName="TaxAuthorityId" />
+          <ScalarProperty Name="RepresentPerson" ColumnName="RepresentPerson" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="BankNumber" ColumnName="BankNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BankAccountName" ColumnName="BankAccountName" />
+          <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+          <ScalarProperty Name="Sign" ColumnName="Sign" />
+          <ScalarProperty Name="FormNo" ColumnName="FormNo" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="EnterpriseAddress" ColumnName="EnterpriseAddress" />
+          <ScalarProperty Name="EnterpriseName" ColumnName="EnterpriseName" />
+          <ScalarProperty Name="Footer" ColumnName="Footer" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="TaxNumber" ColumnName="TaxNumber" />
+          <ScalarProperty Name="Ext" ColumnName="Ext" />
+          <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Description_F" ColumnName="Description_F" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Address_F" ColumnName="Address_F" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name_F" ColumnName="Name_F" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompanyTypeId" ColumnName="CompanyTypeId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyTypes">
+      <EntityTypeMapping TypeName="EFModel.CompanyType">
+        <MappingFragment StoreEntitySet="CompanyType">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompanyTypeId" ColumnName="CompanyTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConnectApplications">
+      <EntityTypeMapping TypeName="EFModel.ConnectApplication">
+        <MappingFragment StoreEntitySet="ConnectApplication">
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ConnectApplicationId" ColumnName="ConnectApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConnectHistories">
+      <EntityTypeMapping TypeName="EFModel.ConnectHistory">
+        <MappingFragment StoreEntitySet="ConnectHistory">
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ConnectApplicationId" ColumnName="ConnectApplicationId" />
+          <ScalarProperty Name="ConnectHistoryId" ColumnName="ConnectHistoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConnectWithInvoices">
+      <EntityTypeMapping TypeName="EFModel.ConnectWithInvoice">
+        <MappingFragment StoreEntitySet="ConnectWithInvoice">
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="AdjustmentType" ColumnName="AdjustmentType" />
+          <ScalarProperty Name="StatusInvoice" ColumnName="StatusInvoice" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OtherId" ColumnName="OtherId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="ConnectApplicationId" ColumnName="ConnectApplicationId" />
+          <ScalarProperty Name="ConnectWithInvoiceId" ColumnName="ConnectWithInvoiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="EFModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="InvoiceStatus" ColumnName="InvoiceStatus" />
+          <ScalarProperty Name="IsUsed" ColumnName="IsUsed" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="DeliverMethod" ColumnName="DeliverMethod" />
+          <ScalarProperty Name="SerialCert" ColumnName="SerialCert" />
+          <ScalarProperty Name="SignatureImage" ColumnName="SignatureImage" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="TaxNumber" ColumnName="TaxNumber" />
+          <ScalarProperty Name="RepresentPerson" ColumnName="RepresentPerson" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="BankNumber" ColumnName="BankNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BankAccountName" ColumnName="BankAccountName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Decisions">
+      <EntityTypeMapping TypeName="EFModel.Decision">
+        <MappingFragment StoreEntitySet="Decision">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Responsibility" ColumnName="Responsibility" />
+          <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
+          <ScalarProperty Name="InvoiceProcess" ColumnName="InvoiceProcess" />
+          <ScalarProperty Name="SoftwareApplication" ColumnName="SoftwareApplication" />
+          <ScalarProperty Name="EquipmentSystem" ColumnName="EquipmentSystem" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Recipients" ColumnName="Recipients" />
+          <ScalarProperty Name="Proponent" ColumnName="Proponent" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="DecisionNumber" ColumnName="DecisionNumber" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="CompanyTaxCode" ColumnName="CompanyTaxCode" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="ParentCompany" ColumnName="ParentCompany" />
+          <ScalarProperty Name="DecisionId" ColumnName="DecisionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Decision_Company_Invoice">
+      <EntityTypeMapping TypeName="EFModel.Decision_Company_Invoice">
+        <MappingFragment StoreEntitySet="Decision_Company_Invoice">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="InvoiceTemplateId" ColumnName="InvoiceTemplateId" />
+          <ScalarProperty Name="InvoiceCategoryId" ColumnName="InvoiceCategoryId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="DecisionId" ColumnName="DecisionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_Position">
+      <EntityTypeMapping TypeName="EFModel.DM_Position">
+        <MappingFragment StoreEntitySet="DM_Position">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailConfigs">
+      <EntityTypeMapping TypeName="EFModel.EmailConfig">
+        <MappingFragment StoreEntitySet="EmailConfig">
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="SendType" ColumnName="SendType" />
+          <ScalarProperty Name="SSL" ColumnName="SSL" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="Smtp" ColumnName="Smtp" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="File_version">
+      <EntityTypeMapping TypeName="EFModel.File_version">
+        <MappingFragment StoreEntitySet="File_version">
+          <ScalarProperty Name="SHA1Hash" ColumnName="SHA1Hash" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="VersionID" ColumnName="VersionID" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileExtensions">
+      <EntityTypeMapping TypeName="EFModel.FileExtension">
+        <MappingFragment StoreEntitySet="FileExtension">
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="FileExt" ColumnName="FileExt" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="FileExtensionID" ColumnName="FileExtensionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Files">
+      <EntityTypeMapping TypeName="EFModel.File">
+        <MappingFragment StoreEntitySet="Files">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SHA1Hash" ColumnName="SHA1Hash" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="FolderPath" ColumnName="FolderPath" />
+          <ScalarProperty Name="FolderID" ColumnName="FolderID" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileThumbnails">
+      <EntityTypeMapping TypeName="EFModel.FileThumbnail">
+        <MappingFragment StoreEntitySet="FileThumbnail">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+          <ScalarProperty Name="Quality" ColumnName="Quality" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="FileThumbnailID" ColumnName="FileThumbnailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Folder_access">
+      <EntityTypeMapping TypeName="EFModel.Folder_access">
+        <MappingFragment StoreEntitySet="Folder_access">
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AccessType" ColumnName="AccessType" />
+          <ScalarProperty Name="AccessID" ColumnName="AccessID" />
+          <ScalarProperty Name="FolderID" ColumnName="FolderID" />
+          <ScalarProperty Name="FolderAccessID" ColumnName="FolderAccessID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Folders">
+      <EntityTypeMapping TypeName="EFModel.Folder">
+        <MappingFragment StoreEntitySet="Folders">
+          <ScalarProperty Name="NodeID" ColumnName="NodeID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="IsCached" ColumnName="IsCached" />
+          <ScalarProperty Name="IsProtected" ColumnName="IsProtected" />
+          <ScalarProperty Name="FolderType" ColumnName="FolderType" />
+          <ScalarProperty Name="FolderPath" ColumnName="FolderPath" />
+          <ScalarProperty Name="FolderName" ColumnName="FolderName" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="FolderID" ColumnName="FolderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="idm_Right">
+      <EntityTypeMapping TypeName="EFModel.idm_Right">
+        <MappingFragment StoreEntitySet="idm_Right">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="IsGroup" ColumnName="IsGroup" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RightName" ColumnName="RightName" />
+          <ScalarProperty Name="RightCode" ColumnName="RightCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="idm_RightsInRole">
+      <EntityTypeMapping TypeName="EFModel.idm_RightsInRole">
+        <MappingFragment StoreEntitySet="idm_RightsInRole">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="RightCode" ColumnName="RightCode" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="idm_RightsOfUser">
+      <EntityTypeMapping TypeName="EFModel.idm_RightsOfUser">
+        <MappingFragment StoreEntitySet="idm_RightsOfUser">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="Inherited" ColumnName="Inherited" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="InheritedFromRoles" ColumnName="InheritedFromRoles" />
+          <ScalarProperty Name="RightCode" ColumnName="RightCode" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="EFModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="IsOtherApp" ColumnName="IsOtherApp" />
+          <ScalarProperty Name="DrainageServiceTaxMoney" ColumnName="DrainageServiceTaxMoney" />
+          <ScalarProperty Name="DrainageServicePrice" ColumnName="DrainageServicePrice" />
+          <ScalarProperty Name="AmountExchanged" ColumnName="AmountExchanged" />
+          <ScalarProperty Name="UseNumber" ColumnName="UseNumber" />
+          <ScalarProperty Name="ToUseDate" ColumnName="ToUseDate" />
+          <ScalarProperty Name="StartNumber" ColumnName="StartNumber" />
+          <ScalarProperty Name="FromUseDate" ColumnName="FromUseDate" />
+          <ScalarProperty Name="EnvironmentTax" ColumnName="EnvironmentTax" />
+          <ScalarProperty Name="EnvironmentFee" ColumnName="EnvironmentFee" />
+          <ScalarProperty Name="EndNumber" ColumnName="EndNumber" />
+          <ScalarProperty Name="PdfUrl" ColumnName="PdfUrl" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="IsCustomerSignReportDelete" ColumnName="IsCustomerSignReportDelete" />
+          <ScalarProperty Name="IsCustomerSignReportChange" ColumnName="IsCustomerSignReportChange" />
+          <ScalarProperty Name="IsCompanySignReportDelete" ColumnName="IsCompanySignReportDelete" />
+          <ScalarProperty Name="IsCompanySignReportChange" ColumnName="IsCompanySignReportChange" />
+          <ScalarProperty Name="DeleteReportUrl" ColumnName="DeleteReportUrl" />
+          <ScalarProperty Name="DeleteReportFileName" ColumnName="DeleteReportFileName" />
+          <ScalarProperty Name="ChangeReportUrl" ColumnName="ChangeReportUrl" />
+          <ScalarProperty Name="ChangeReportFileName" ColumnName="ChangeReportFileName" />
+          <ScalarProperty Name="BuyerCode" ColumnName="BuyerCode" />
+          <ScalarProperty Name="ReportFileName" ColumnName="ReportFileName" />
+          <ScalarProperty Name="ReportUrl" ColumnName="ReportUrl" />
+          <ScalarProperty Name="IsCustomerSignReport" ColumnName="IsCustomerSignReport" />
+          <ScalarProperty Name="IsCompanySignReport" ColumnName="IsCompanySignReport" />
+          <ScalarProperty Name="CreatedDateSigned" ColumnName="CreatedDateSigned" />
+          <ScalarProperty Name="CreatedDateNoSigned" ColumnName="CreatedDateNoSigned" />
+          <ScalarProperty Name="SkippedInvoiceId" ColumnName="SkippedInvoiceId" />
+          <ScalarProperty Name="SkippedInvoiceStatus" ColumnName="SkippedInvoiceStatus" />
+          <ScalarProperty Name="TrangThaiXemTraCuuHoaDon" ColumnName="TrangThaiXemTraCuuHoaDon" />
+          <ScalarProperty Name="InvoiceCode" ColumnName="InvoiceCode" />
+          <ScalarProperty Name="ConvertedDate" ColumnName="ConvertedDate" />
+          <ScalarProperty Name="ConvertedStatus" ColumnName="ConvertedStatus" />
+          <ScalarProperty Name="VatPercentage" ColumnName="VatPercentage" />
+          <ScalarProperty Name="InvoiceStatus" ColumnName="InvoiceStatus" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="PortalLink" ColumnName="PortalLink" />
+          <ScalarProperty Name="ProductCodes" ColumnName="ProductCodes" />
+          <ScalarProperty Name="IsDiscountAmtPos" ColumnName="IsDiscountAmtPos" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="IsTotalAmtWithoutVatPos" ColumnName="IsTotalAmtWithoutVatPos" />
+          <ScalarProperty Name="IsTotalVATAmountPos" ColumnName="IsTotalVATAmountPos" />
+          <ScalarProperty Name="IsTotalAmountPos" ColumnName="IsTotalAmountPos" />
+          <ScalarProperty Name="TotalAmountWithVATInWords" ColumnName="TotalAmountWithVATInWords" />
+          <ScalarProperty Name="TotalAmountWithVATFrn" ColumnName="TotalAmountWithVATFrn" />
+          <ScalarProperty Name="TotalAmountWithVAT" ColumnName="TotalAmountWithVAT" />
+          <ScalarProperty Name="TotalVATAmount" ColumnName="TotalVATAmount" />
+          <ScalarProperty Name="TotalAmountWithoutVAT" ColumnName="TotalAmountWithoutVAT" />
+          <ScalarProperty Name="SumOfTotalLineAmountWithoutVAT" ColumnName="SumOfTotalLineAmountWithoutVAT" />
+          <ScalarProperty Name="BuyerBankAccount" ColumnName="BuyerBankAccount" />
+          <ScalarProperty Name="BuyerBankName" ColumnName="BuyerBankName" />
+          <ScalarProperty Name="BuyerEmail" ColumnName="BuyerEmail" />
+          <ScalarProperty Name="BuyerFaxNumber" ColumnName="BuyerFaxNumber" />
+          <ScalarProperty Name="BuyerPhoneNumber" ColumnName="BuyerPhoneNumber" />
+          <ScalarProperty Name="BuyerCountryCode" ColumnName="BuyerCountryCode" />
+          <ScalarProperty Name="BuyerCityName" ColumnName="BuyerCityName" />
+          <ScalarProperty Name="BuyerDistrictName" ColumnName="BuyerDistrictName" />
+          <ScalarProperty Name="BuyerPostalCode" ColumnName="BuyerPostalCode" />
+          <ScalarProperty Name="BuyerAddressLine" ColumnName="BuyerAddressLine" />
+          <ScalarProperty Name="BuyerTaxCode" ColumnName="BuyerTaxCode" />
+          <ScalarProperty Name="BuyerLegalName" ColumnName="BuyerLegalName" />
+          <ScalarProperty Name="BuyerDisplayName" ColumnName="BuyerDisplayName" />
+          <ScalarProperty Name="SellerSubmittedPersonName" ColumnName="SellerSubmittedPersonName" />
+          <ScalarProperty Name="SellerSignedPersonName" ColumnName="SellerSignedPersonName" />
+          <ScalarProperty Name="SellerContactPersonName" ColumnName="SellerContactPersonName" />
+          <ScalarProperty Name="SellerBankAccount" ColumnName="SellerBankAccount" />
+          <ScalarProperty Name="SellerBankName" ColumnName="SellerBankName" />
+          <ScalarProperty Name="SellerEmail" ColumnName="SellerEmail" />
+          <ScalarProperty Name="SellerFaxNumber" ColumnName="SellerFaxNumber" />
+          <ScalarProperty Name="SellerPhoneNumber" ColumnName="SellerPhoneNumber" />
+          <ScalarProperty Name="SellerCountryCode" ColumnName="SellerCountryCode" />
+          <ScalarProperty Name="SellerCityName" ColumnName="SellerCityName" />
+          <ScalarProperty Name="SellerDistrictName" ColumnName="SellerDistrictName" />
+          <ScalarProperty Name="SellerPostalCode" ColumnName="SellerPostalCode" />
+          <ScalarProperty Name="SellerAddressLine" ColumnName="SellerAddressLine" />
+          <ScalarProperty Name="SellerTaxCode" ColumnName="SellerTaxCode" />
+          <ScalarProperty Name="SellerLegalName" ColumnName="SellerLegalName" />
+          <ScalarProperty Name="AdditionalReferenceDate" ColumnName="AdditionalReferenceDate" />
+          <ScalarProperty Name="AdditionalReferenceDesc" ColumnName="AdditionalReferenceDesc" />
+          <ScalarProperty Name="OriginalInvoiceId" ColumnName="OriginalInvoiceId" />
+          <ScalarProperty Name="AdjustmentType" ColumnName="AdjustmentType" />
+          <ScalarProperty Name="InvoiceNote" ColumnName="InvoiceNote" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="ContractNumber" ColumnName="ContractNumber" />
+          <ScalarProperty Name="SubmittedDate" ColumnName="SubmittedDate" />
+          <ScalarProperty Name="SignedDate" ColumnName="SignedDate" />
+          <ScalarProperty Name="InvoiceIssuedDate" ColumnName="InvoiceIssuedDate" />
+          <ScalarProperty Name="InvoiceName" ColumnName="InvoiceName" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceSeries" ColumnName="InvoiceSeries" />
+          <ScalarProperty Name="TemplateCode" ColumnName="TemplateCode" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="InvoiceAppRecordId" ColumnName="InvoiceAppRecordId" />
+          <ScalarProperty Name="SellerAppRecordId" ColumnName="SellerAppRecordId" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="PublishBy" ColumnName="PublishBy" />
+          <ScalarProperty Name="CreationBy" ColumnName="CreationBy" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CertifiedData" ColumnName="CertifiedData" />
+          <ScalarProperty Name="CertifiedId" ColumnName="CertifiedId" />
+          <ScalarProperty Name="Certified" ColumnName="Certified" />
+          <ScalarProperty Name="GrossValue10" ColumnName="GrossValue10" />
+          <ScalarProperty Name="VatAmount10" ColumnName="VatAmount10" />
+          <ScalarProperty Name="GrossValue5" ColumnName="GrossValue5" />
+          <ScalarProperty Name="VatAmount5" ColumnName="VatAmount5" />
+          <ScalarProperty Name="GrossValue0" ColumnName="GrossValue0" />
+          <ScalarProperty Name="VatAmount0" ColumnName="VatAmount0" />
+          <ScalarProperty Name="GrossValue" ColumnName="GrossValue" />
+          <ScalarProperty Name="ProcessInvoiceNote" ColumnName="ProcessInvoiceNote" />
+          <ScalarProperty Name="ArisingDate" ColumnName="ArisingDate" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="KindOfService" ColumnName="KindOfService" />
+          <ScalarProperty Name="Converted" ColumnName="Converted" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="InvoiceTemplateId" ColumnName="InvoiceTemplateId" />
+          <ScalarProperty Name="InvoiceCategoryId" ColumnName="InvoiceCategoryId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceCategories">
+      <EntityTypeMapping TypeName="EFModel.InvoiceCategory">
+        <MappingFragment StoreEntitySet="InvoiceCategory">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="IsPublic" ColumnName="IsPublic" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="InvoiceCategoryId" ColumnName="InvoiceCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoicePayments">
+      <EntityTypeMapping TypeName="EFModel.InvoicePayment">
+        <MappingFragment StoreEntitySet="InvoicePayment">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="BankAccountName" ColumnName="BankAccountName" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />
+          <ScalarProperty Name="PaymentDueDate" ColumnName="PaymentDueDate" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="PaymentNote" ColumnName="PaymentNote" />
+          <ScalarProperty Name="PaymentMethodName" ColumnName="PaymentMethodName" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="InvoicePaymentId" ColumnName="InvoicePaymentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceTemplates">
+      <EntityTypeMapping TypeName="EFModel.InvoiceTemplate">
+        <MappingFragment StoreEntitySet="InvoiceTemplate">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="VatType" ColumnName="VatType" />
+          <ScalarProperty Name="BusinessArea" ColumnName="BusinessArea" />
+          <ScalarProperty Name="TemplateCode" ColumnName="TemplateCode" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="IsCertify" ColumnName="IsCertify" />
+          <ScalarProperty Name="IsPublic" ColumnName="IsPublic" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CssBackground" ColumnName="CssBackground" />
+          <ScalarProperty Name="CssLogo" ColumnName="CssLogo" />
+          <ScalarProperty Name="CssData" ColumnName="CssData" />
+          <ScalarProperty Name="IViewer" ColumnName="IViewer" />
+          <ScalarProperty Name="IGenerator" ColumnName="IGenerator" />
+          <ScalarProperty Name="InvoiceView" ColumnName="InvoiceView" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="SchemaFile" ColumnName="SchemaFile" />
+          <ScalarProperty Name="XsltFile" ColumnName="XsltFile" />
+          <ScalarProperty Name="XmlFile" ColumnName="XmlFile" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="InvoiceCategoryId" ColumnName="InvoiceCategoryId" />
+          <ScalarProperty Name="InvoiceTemplateId" ColumnName="InvoiceTemplateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="EFModel.Log">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+          <ScalarProperty Name="ObjectType" ColumnName="ObjectType" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="ActionByUserID" ColumnName="ActionByUserID" />
+          <ScalarProperty Name="Logger" ColumnName="Logger" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Thread" ColumnName="Thread" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Media_Programmes">
+      <EntityTypeMapping TypeName="EFModel.Media_Programmes">
+        <MappingFragment StoreEntitySet="Media_Programmes">
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="BroadcastTime" ColumnName="BroadcastTime" />
+          <ScalarProperty Name="BroadcastDate" ColumnName="BroadcastDate" />
+          <ScalarProperty Name="ProgrammeName" ColumnName="ProgrammeName" />
+          <ScalarProperty Name="ProgrammeID" ColumnName="ProgrammeID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metadatas">
+      <EntityTypeMapping TypeName="EFModel.Metadata">
+        <MappingFragment StoreEntitySet="Metadata">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="MetadataFormat" ColumnName="MetadataFormat" />
+          <ScalarProperty Name="MetadataName" ColumnName="MetadataName" />
+          <ScalarProperty Name="MetadataID" ColumnName="MetadataID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metadata_Field">
+      <EntityTypeMapping TypeName="EFModel.Metadata_Field">
+        <MappingFragment StoreEntitySet="Metadata_Field">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FormlyContent" ColumnName="FormlyContent" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MetadataFieldId" ColumnName="MetadataFieldId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metadata_Field_Template_Relationship">
+      <EntityTypeMapping TypeName="EFModel.Metadata_Field_Template_Relationship">
+        <MappingFragment StoreEntitySet="Metadata_Field_Template_Relationship">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="MetadataFieldId" ColumnName="MetadataFieldId" />
+          <ScalarProperty Name="MetadataTemplateId" ColumnName="MetadataTemplateId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metadata_Nodetype">
+      <EntityTypeMapping TypeName="EFModel.Metadata_Nodetype">
+        <MappingFragment StoreEntitySet="Metadata_Nodetype">
+          <ScalarProperty Name="NoteTypeID" ColumnName="NoteTypeID" />
+          <ScalarProperty Name="MetadataName" ColumnName="MetadataName" />
+          <ScalarProperty Name="MetadataID" ColumnName="MetadataID" />
+          <ScalarProperty Name="MetaNodeTypeID" ColumnName="MetaNodeTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metadata_Template">
+      <EntityTypeMapping TypeName="EFModel.Metadata_Template">
+        <MappingFragment StoreEntitySet="Metadata_Template">
+          <ScalarProperty Name="FormConfig" ColumnName="FormConfig" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="MetadataTemplateId" ColumnName="MetadataTemplateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Navigations">
+      <EntityTypeMapping TypeName="EFModel.Navigation">
+        <MappingFragment StoreEntitySet="Navigation">
+          <ScalarProperty Name="SubUrl" ColumnName="SubUrl" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="IdPath" ColumnName="IdPath" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="NavigationName_En" ColumnName="NavigationName_En" />
+          <ScalarProperty Name="IconClass" ColumnName="IconClass" />
+          <ScalarProperty Name="UrlRewrite" ColumnName="UrlRewrite" />
+          <ScalarProperty Name="HasChild" ColumnName="HasChild" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="NavigationId" ColumnName="NavigationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Navigation_Role">
+      <EntityTypeMapping TypeName="EFModel.Navigation_Role">
+        <MappingFragment StoreEntitySet="Navigation_Role">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="FromSubNavigation" ColumnName="FromSubNavigation" />
+          <ScalarProperty Name="NavigationId" ColumnName="NavigationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="NavigationRoleId" ColumnName="NavigationRoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Node_access">
+      <EntityTypeMapping TypeName="EFModel.Node_access">
+        <MappingFragment StoreEntitySet="Node_access">
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="AccessType" ColumnName="AccessType" />
+          <ScalarProperty Name="AccessID" ColumnName="AccessID" />
+          <ScalarProperty Name="NodeID" ColumnName="NodeID" />
+          <ScalarProperty Name="NodeAccessID" ColumnName="NodeAccessID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Node_files">
+      <EntityTypeMapping TypeName="EFModel.Node_files">
+        <MappingFragment StoreEntitySet="Node_files">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FileSrc" ColumnName="FileSrc" />
+          <ScalarProperty Name="RelativePath" ColumnName="RelativePath" />
+          <ScalarProperty Name="AbsolutePath" ColumnName="AbsolutePath" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+          <ScalarProperty Name="NodeID" ColumnName="NodeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Node_metadata">
+      <EntityTypeMapping TypeName="EFModel.Node_metadata">
+        <MappingFragment StoreEntitySet="Node_metadata">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="MetadataValue" ColumnName="MetadataValue" />
+          <ScalarProperty Name="MetadataName" ColumnName="MetadataName" />
+          <ScalarProperty Name="MetadataID" ColumnName="MetadataID" />
+          <ScalarProperty Name="NodeID" ColumnName="NodeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Node_ref">
+      <EntityTypeMapping TypeName="EFModel.Node_ref">
+        <MappingFragment StoreEntitySet="Node_ref">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RefType" ColumnName="RefType" />
+          <ScalarProperty Name="NodeRefID" ColumnName="NodeRefID" />
+          <ScalarProperty Name="NodeID" ColumnName="NodeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Node_tags">
+      <EntityTypeMapping TypeName="EFModel.Node_tags">
+        <MappingFragment StoreEntitySet="Node_tags">
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="NodeID" ColumnName="NodeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Node_type">
+      <EntityTypeMapping TypeName="EFModel.Node_type">
+        <MappingFragment StoreEntitySet="Node_type">
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="Disabled" ColumnName="Disabled" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Custom" ColumnName="Custom" />
+          <ScalarProperty Name="Haslabel" ColumnName="Haslabel" />
+          <ScalarProperty Name="Hastitle" ColumnName="Hastitle" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="NodeTypeID" ColumnName="NodeTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Node_WorkFlow">
+      <EntityTypeMapping TypeName="EFModel.Node_WorkFlow">
+        <MappingFragment StoreEntitySet="Node_WorkFlow">
+          <ScalarProperty Name="IsApproveByManager" ColumnName="IsApproveByManager" />
+          <ScalarProperty Name="IsApproveByTaper" ColumnName="IsApproveByTaper" />
+          <ScalarProperty Name="ApprovalResult" ColumnName="ApprovalResult" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="StartByUserName" ColumnName="StartByUserName" />
+          <ScalarProperty Name="NodeID" ColumnName="NodeID" />
+          <ScalarProperty Name="NodeWorkFlowID" ColumnName="NodeWorkFlowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Node_WorkFlow_TransitionHistory">
+      <EntityTypeMapping TypeName="EFModel.Node_WorkFlow_TransitionHistory">
+        <MappingFragment StoreEntitySet="Node_WorkFlow_TransitionHistory">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Command" ColumnName="Command" />
+          <ScalarProperty Name="DestinationState" ColumnName="DestinationState" />
+          <ScalarProperty Name="InitialState" ColumnName="InitialState" />
+          <ScalarProperty Name="TransitionTimeForSort" ColumnName="TransitionTimeForSort" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="TransitionTime" ColumnName="TransitionTime" />
+          <ScalarProperty Name="AllowedToUserNames" ColumnName="AllowedToUserNames" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="NodeId" ColumnName="NodeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Node_WorkFlowExt">
+      <EntityTypeMapping TypeName="EFModel.Node_WorkFlowExt">
+        <MappingFragment StoreEntitySet="Node_WorkFlowExt">
+          <ScalarProperty Name="EpisodeTitle" ColumnName="EpisodeTitle" />
+          <ScalarProperty Name="TapeCode" ColumnName="TapeCode" />
+          <ScalarProperty Name="ProgrammeID" ColumnName="ProgrammeID" />
+          <ScalarProperty Name="NodeWorkFlowID" ColumnName="NodeWorkFlowID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nodes">
+      <EntityTypeMapping TypeName="EFModel.Node">
+        <MappingFragment StoreEntitySet="Nodes">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="Node_access" ColumnName="Node_access" />
+          <ScalarProperty Name="Node_files" ColumnName="Node_files" />
+          <ScalarProperty Name="Node_ref" ColumnName="Node_ref" />
+          <ScalarProperty Name="Node_tags" ColumnName="Node_tags" />
+          <ScalarProperty Name="Node_metadata" ColumnName="Node_metadata" />
+          <ScalarProperty Name="ModerateUserID" ColumnName="ModerateUserID" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="NodePath" ColumnName="NodePath" />
+          <ScalarProperty Name="NodeTypeID" ColumnName="NodeTypeID" />
+          <ScalarProperty Name="ParentNodeID" ColumnName="ParentNodeID" />
+          <ScalarProperty Name="NodeID" ColumnName="NodeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Invoice">
+      <EntityTypeMapping TypeName="EFModel.Product_Invoice">
+        <MappingFragment StoreEntitySet="Product_Invoice">
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="LotNumber" ColumnName="LotNumber" />
+          <ScalarProperty Name="ItemTotalAmountWithVat" ColumnName="ItemTotalAmountWithVat" />
+          <ScalarProperty Name="IsIncreaseItem" ColumnName="IsIncreaseItem" />
+          <ScalarProperty Name="AdjustmentVatAmount" ColumnName="AdjustmentVatAmount" />
+          <ScalarProperty Name="Promotion" ColumnName="Promotion" />
+          <ScalarProperty Name="VatAmount" ColumnName="VatAmount" />
+          <ScalarProperty Name="VatPercentage" ColumnName="VatPercentage" />
+          <ScalarProperty Name="ItemTotalAmountWithoutVat" ColumnName="ItemTotalAmountWithoutVat" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="LineNumber" ColumnName="LineNumber" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="ProductInvoiceId" ColumnName="ProductInvoiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="EFModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="TotalAmountAfterVAT" ColumnName="TotalAmountAfterVAT" />
+          <ScalarProperty Name="PriceAfterVAT" ColumnName="PriceAfterVAT" />
+          <ScalarProperty Name="VATPercent" ColumnName="VATPercent" />
+          <ScalarProperty Name="AmountBeforeVAT" ColumnName="AmountBeforeVAT" />
+          <ScalarProperty Name="DiscountPercent" ColumnName="DiscountPercent" />
+          <ScalarProperty Name="PriceBeforeVAT" ColumnName="PriceBeforeVAT" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NodeId" ColumnName="NodeId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="TypeOfProduct" ColumnName="TypeOfProduct" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publish_Announcement">
+      <EntityTypeMapping TypeName="EFModel.Publish_Announcement">
+        <MappingFragment StoreEntitySet="Publish_Announcement">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Representative" ColumnName="Representative" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Delimiter" ColumnName="Delimiter" />
+          <ScalarProperty Name="TaxAuthorityId" ColumnName="TaxAuthorityId" />
+          <ScalarProperty Name="CompanyPhone" ColumnName="CompanyPhone" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="CompanyTaxCode" ColumnName="CompanyTaxCode" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="PublishAnnouncementId" ColumnName="PublishAnnouncementId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publish_Invoice_Template">
+      <EntityTypeMapping TypeName="EFModel.Publish_Invoice_Template">
+        <MappingFragment StoreEntitySet="Publish_Invoice_Template">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="RestNumber" ColumnName="RestNumber" />
+          <ScalarProperty Name="CurrentNumber" ColumnName="CurrentNumber" />
+          <ScalarProperty Name="ToNumber" ColumnName="ToNumber" />
+          <ScalarProperty Name="FromNumber" ColumnName="FromNumber" />
+          <ScalarProperty Name="TotalNumber" ColumnName="TotalNumber" />
+          <ScalarProperty Name="InvoiceSeries" ColumnName="InvoiceSeries" />
+          <ScalarProperty Name="InvoiceTemplateId" ColumnName="InvoiceTemplateId" />
+          <ScalarProperty Name="InvoiceCategoryId" ColumnName="InvoiceCategoryId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="PublishAnnouncementId" ColumnName="PublishAnnouncementId" />
+          <ScalarProperty Name="PublishInvoiceTemplateId" ColumnName="PublishInvoiceTemplateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recent_files">
+      <EntityTypeMapping TypeName="EFModel.Recent_files">
+        <MappingFragment StoreEntitySet="Recent_files">
+          <ScalarProperty Name="RecentFileID" ColumnName="RecentFileID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recent_folders">
+      <EntityTypeMapping TypeName="EFModel.Recent_folders">
+        <MappingFragment StoreEntitySet="Recent_folders">
+          <ScalarProperty Name="RecentFolderID" ColumnName="RecentFolderID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recent_roles">
+      <EntityTypeMapping TypeName="EFModel.Recent_roles">
+        <MappingFragment StoreEntitySet="Recent_roles">
+          <ScalarProperty Name="RecentRoleID" ColumnName="RecentRoleID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recent_users">
+      <EntityTypeMapping TypeName="EFModel.Recent_users">
+        <MappingFragment StoreEntitySet="Recent_users">
+          <ScalarProperty Name="RecentUserID" ColumnName="RecentUserID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rights">
+      <EntityTypeMapping TypeName="EFModel.Right">
+        <MappingFragment StoreEntitySet="Right">
+          <ScalarProperty Name="IconClass" ColumnName="IconClass" />
+          <ScalarProperty Name="UrlRewrite" ColumnName="UrlRewrite" />
+          <ScalarProperty Name="HasChild" ColumnName="HasChild" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RightName" ColumnName="RightName" />
+          <ScalarProperty Name="RightCode" ColumnName="RightCode" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="ParentRightID" ColumnName="ParentRightID" />
+          <ScalarProperty Name="RightID" ColumnName="RightID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Right_Role">
+      <EntityTypeMapping TypeName="EFModel.Right_Role">
+        <MappingFragment StoreEntitySet="Right_Role">
+          <ScalarProperty Name="RightCode" ColumnName="RightCode" />
+          <ScalarProperty Name="RightName" ColumnName="RightName" />
+          <ScalarProperty Name="RightID" ColumnName="RightID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RightRoleID" ColumnName="RightRoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SendEmailHistories">
+      <EntityTypeMapping TypeName="EFModel.SendEmailHistory">
+        <MappingFragment StoreEntitySet="SendEmailHistory">
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="SendingDate" ColumnName="SendingDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SkippedInvoices">
+      <EntityTypeMapping TypeName="EFModel.SkippedInvoice">
+        <MappingFragment StoreEntitySet="SkippedInvoice">
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ToNumber" ColumnName="ToNumber" />
+          <ScalarProperty Name="FromNumber" ColumnName="FromNumber" />
+          <ScalarProperty Name="PublishInvoiceTemplateId" ColumnName="PublishInvoiceTemplateId" />
+          <ScalarProperty Name="SkippedInvoiceId" ColumnName="SkippedInvoiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="EFModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemParameters">
+      <EntityTypeMapping TypeName="EFModel.SystemParameter">
+        <MappingFragment StoreEntitySet="SystemParameter">
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="ParameterValue" ColumnName="ParameterValue" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ParameterCode" ColumnName="ParameterCode" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxAuthorities">
+      <EntityTypeMapping TypeName="EFModel.TaxAuthority">
+        <MappingFragment StoreEntitySet="TaxAuthority">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="TaxAuthorityId" ColumnName="TaxAuthorityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taxonomy_ScopeTypes">
+      <EntityTypeMapping TypeName="EFModel.Taxonomy_ScopeTypes">
+        <MappingFragment StoreEntitySet="Taxonomy_ScopeTypes">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="ScopeType" ColumnName="ScopeType" />
+          <ScalarProperty Name="ScopeTypeID" ColumnName="ScopeTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taxonomy_Term">
+      <EntityTypeMapping TypeName="EFModel.Taxonomy_Term">
+        <MappingFragment StoreEntitySet="Taxonomy_Term">
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="IdPath" ColumnName="IdPath" />
+          <ScalarProperty Name="ChildCount" ColumnName="ChildCount" />
+          <ScalarProperty Name="VocabularyCode" ColumnName="VocabularyCode" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="TermRight" ColumnName="TermRight" />
+          <ScalarProperty Name="TermLeft" ColumnName="TermLeft" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="VocabularyId" ColumnName="VocabularyId" />
+          <ScalarProperty Name="TermId" ColumnName="TermId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taxonomy_Vocabulary">
+      <EntityTypeMapping TypeName="EFModel.Taxonomy_Vocabulary">
+        <MappingFragment StoreEntitySet="Taxonomy_Vocabulary">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="LastModifiedOnDate" ColumnName="LastModifiedOnDate" />
+          <ScalarProperty Name="LastModifiedByUserId" ColumnName="LastModifiedByUserId" />
+          <ScalarProperty Name="CreatedOnDate" ColumnName="CreatedOnDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VocabularyTypeID" ColumnName="VocabularyTypeID" />
+          <ScalarProperty Name="VocabularyId" ColumnName="VocabularyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taxonomy_VocabularyTypes">
+      <EntityTypeMapping TypeName="EFModel.Taxonomy_VocabularyTypes">
+        <MappingFragment StoreEntitySet="Taxonomy_VocabularyTypes">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="VocabularyType" ColumnName="VocabularyType" />
+          <ScalarProperty Name="VocabularyTypeID" ColumnName="VocabularyTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users_Position_Relationships">
+      <EntityTypeMapping TypeName="EFModel.Users_Position_Relationships">
+        <MappingFragment StoreEntitySet="Users_Position_Relationships">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Position_Id" ColumnName="Position_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workflow_Document">
+      <EntityTypeMapping TypeName="EFModel.Workflow_Document">
+        <MappingFragment StoreEntitySet="Workflow_Document">
+          <ScalarProperty Name="IsDenialPreExecute" ColumnName="IsDenialPreExecute" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Sum" ColumnName="Sum" />
+          <ScalarProperty Name="EmloyeeControlerId" ColumnName="EmloyeeControlerId" />
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workflow_DocumentTransitionHistory">
+      <EntityTypeMapping TypeName="EFModel.Workflow_DocumentTransitionHistory">
+        <MappingFragment StoreEntitySet="Workflow_DocumentTransitionHistory">
+          <ScalarProperty Name="InitialTime" ColumnName="InitialTime" />
+          <ScalarProperty Name="IsDenial" ColumnName="IsDenial" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Command" ColumnName="Command" />
+          <ScalarProperty Name="DestinationState" ColumnName="DestinationState" />
+          <ScalarProperty Name="InitialState" ColumnName="InitialState" />
+          <ScalarProperty Name="TransitionTimeForSort" ColumnName="TransitionTimeForSort" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="TransitionTime" ColumnName="TransitionTime" />
+          <ScalarProperty Name="AllowedToEmployeeNames" ColumnName="AllowedToEmployeeNames" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workflow_Employee">
+      <EntityTypeMapping TypeName="EFModel.Workflow_Employee">
+        <MappingFragment StoreEntitySet="Workflow_Employee">
+          <ScalarProperty Name="IsHead" ColumnName="IsHead" />
+          <ScalarProperty Name="StructDivisionId" ColumnName="StructDivisionId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workflow_Roles">
+      <EntityTypeMapping TypeName="EFModel.Workflow_Roles">
+        <MappingFragment StoreEntitySet="Workflow_Roles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workflow_StructDivision">
+      <EntityTypeMapping TypeName="EFModel.Workflow_StructDivision">
+        <MappingFragment StoreEntitySet="Workflow_StructDivision">
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowGlobalParameters">
+      <EntityTypeMapping TypeName="EFModel.WorkflowGlobalParameter">
+        <MappingFragment StoreEntitySet="WorkflowGlobalParameter">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowInboxes">
+      <EntityTypeMapping TypeName="EFModel.WorkflowInbox">
+        <MappingFragment StoreEntitySet="WorkflowInbox">
+          <ScalarProperty Name="IdentityId" ColumnName="IdentityId" />
+          <ScalarProperty Name="ProcessId" ColumnName="ProcessId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowProcessInstances">
+      <EntityTypeMapping TypeName="EFModel.WorkflowProcessInstance">
+        <MappingFragment StoreEntitySet="WorkflowProcessInstance">
+          <ScalarProperty Name="IsDeterminingParametersChanged" ColumnName="IsDeterminingParametersChanged" />
+          <ScalarProperty Name="PreviousActivityForReverse" ColumnName="PreviousActivityForReverse" />
+          <ScalarProperty Name="PreviousActivityForDirect" ColumnName="PreviousActivityForDirect" />
+          <ScalarProperty Name="PreviousActivity" ColumnName="PreviousActivity" />
+          <ScalarProperty Name="PreviousStateForReverse" ColumnName="PreviousStateForReverse" />
+          <ScalarProperty Name="PreviousStateForDirect" ColumnName="PreviousStateForDirect" />
+          <ScalarProperty Name="PreviousState" ColumnName="PreviousState" />
+          <ScalarProperty Name="SchemeId" ColumnName="SchemeId" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowProcessInstancePersistences">
+      <EntityTypeMapping TypeName="EFModel.WorkflowProcessInstancePersistence">
+        <MappingFragment StoreEntitySet="WorkflowProcessInstancePersistence">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ParameterName" ColumnName="ParameterName" />
+          <ScalarProperty Name="ProcessId" ColumnName="ProcessId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowProcessInstanceStatus">
+      <EntityTypeMapping TypeName="EFModel.WorkflowProcessInstanceStatu">
+        <MappingFragment StoreEntitySet="WorkflowProcessInstanceStatus">
+          <ScalarProperty Name="Lock" ColumnName="Lock" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowProcessSchemes">
+      <EntityTypeMapping TypeName="EFModel.WorkflowProcessScheme">
+        <MappingFragment StoreEntitySet="WorkflowProcessScheme">
+          <ScalarProperty Name="IsObsolete" ColumnName="IsObsolete" />
+          <ScalarProperty Name="SchemeCode" ColumnName="SchemeCode" />
+          <ScalarProperty Name="DefiningParametersHash" ColumnName="DefiningParametersHash" />
+          <ScalarProperty Name="DefiningParameters" ColumnName="DefiningParameters" />
+          <ScalarProperty Name="Scheme" ColumnName="Scheme" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowProcessTimers">
+      <EntityTypeMapping TypeName="EFModel.WorkflowProcessTimer">
+        <MappingFragment StoreEntitySet="WorkflowProcessTimer">
+          <ScalarProperty Name="Ignore" ColumnName="Ignore" />
+          <ScalarProperty Name="NextExecutionDateTime" ColumnName="NextExecutionDateTime" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProcessId" ColumnName="ProcessId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowProcessTransitionHistories">
+      <EntityTypeMapping TypeName="EFModel.WorkflowProcessTransitionHistory">
+        <MappingFragment StoreEntitySet="WorkflowProcessTransitionHistory">
+          <ScalarProperty Name="TriggerName" ColumnName="TriggerName" />
+          <ScalarProperty Name="FromStateName" ColumnName="FromStateName" />
+          <ScalarProperty Name="IsFinalised" ColumnName="IsFinalised" />
+          <ScalarProperty Name="TransitionClassifier" ColumnName="TransitionClassifier" />
+          <ScalarProperty Name="TransitionTime" ColumnName="TransitionTime" />
+          <ScalarProperty Name="ToStateName" ColumnName="ToStateName" />
+          <ScalarProperty Name="ToActivityName" ColumnName="ToActivityName" />
+          <ScalarProperty Name="FromActivityName" ColumnName="FromActivityName" />
+          <ScalarProperty Name="ActorIdentityId" ColumnName="ActorIdentityId" />
+          <ScalarProperty Name="ExecutorIdentityId" ColumnName="ExecutorIdentityId" />
+          <ScalarProperty Name="ProcessId" ColumnName="ProcessId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowSchemes">
+      <EntityTypeMapping TypeName="EFModel.WorkflowScheme">
+        <MappingFragment StoreEntitySet="WorkflowScheme">
+          <ScalarProperty Name="DisplayStatus" ColumnName="DisplayStatus" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Scheme" ColumnName="Scheme" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowScheme_Document">
+      <EntityTypeMapping TypeName="EFModel.WorkflowScheme_Document">
+        <MappingFragment StoreEntitySet="WorkflowScheme_Document">
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="SchemeCode" ColumnName="SchemeCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Workflow_EmployeeRole" TypeName="EFModel.Workflow_EmployeeRole" StoreEntitySet="Workflow_EmployeeRole">
+      <EndProperty Name="Workflow_Roles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="Workflow_Employee">
+        <ScalarProperty Name="Id" ColumnName="EmloyeeId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

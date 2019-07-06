@@ -1,0 +1,3387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="_DatabaseLog">
+    <Key>
+      <PropertyRef Name="DatabaseLogId" />
+    </Key>
+    <Property Name="DatabaseLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Version" Type="int" />
+    <Property Name="DatabaseUser" Type="nvarchar" MaxLength="128" />
+    <Property Name="Event" Type="nvarchar" MaxLength="128" />
+    <Property Name="Schema" Type="nvarchar" MaxLength="128" />
+    <Property Name="Object" Type="nvarchar" MaxLength="128" />
+    <Property Name="TSQL" Type="nvarchar(max)" />
+    <Property Name="Author" Type="nvarchar" MaxLength="64" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="XmlEvent" Type="xml" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="ExecutedOnDate" Type="datetime" />
+    <Property Name="IsLogSucceeded" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccessList">
+    <Key>
+      <PropertyRef Name="AccessID" />
+    </Key>
+    <Property Name="AccessID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccessType" Type="varchar" MaxLength="128" />
+    <Property Name="AccessKey" Type="varchar" MaxLength="128" />
+    <Property Name="AccessName" Type="varchar" MaxLength="128" />
+    <Property Name="ViewOrder" Type="int" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredApplicationName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+    <Property Name="DeleteDate" Type="datetime" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="512" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="512" />
+    <Property Name="ShortName" Type="nvarchar" MaxLength="256" />
+    <Property Name="OtherEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="CmsSiteSiteId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="aspnet_Organizations">
+    <Key>
+      <PropertyRef Name="OrganizationID" />
+    </Key>
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrganizationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentOrganizationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrganizationName" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsPublic" Type="bit" />
+    <Property Name="ThuTu" Type="int" />
+    <Property Name="Code" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar" MaxLength="1024" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="256" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="256" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="Loai" Type="int" />
+    <Property Name="IdPath" Type="varchar(max)" />
+    <Property Name="Path" Type="varchar(max)" />
+    <Property Name="Level" Type="int" />
+    <Property Name="HasChild" Type="bit" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredPath" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyNames" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PropertyValuesString" Type="nvarchar(max)" />
+    <Property Name="PropertyValuesBinary" Type="image" />
+    <Property Name="LastUpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredRoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+    <Property Name="EnableDelete" Type="bit" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="RoleCode" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles_Scheme_Relationships">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SchemeCode" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="RoleCode" Type="nvarchar" MaxLength="256" />
+    <Property Name="RolesName" Type="nvarchar" MaxLength="256" />
+    <Property Name="Type" Type="int" />
+  </EntityType>
+  <EntityType Name="aspnet_RolesInOrganization">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrganizationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="CompatibleSchemaVersion" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredUserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+    <Property Name="CmsSiteSiteId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInOrganization">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrganizationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="Role" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="DeleteDate" Type="datetime" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+    <Property Name="EventTime" Type="datetime" Nullable="false" />
+    <Property Name="EventType" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="EventSequence" Type="decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventOccurrence" Type="decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventCode" Type="int" Nullable="false" />
+    <Property Name="EventDetailCode" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ApplicationPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="ApplicationVirtualPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="RequestUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ExceptionType" Type="nvarchar" MaxLength="256" />
+    <Property Name="Details" Type="ntext" />
+  </EntityType>
+  <EntityType Name="bsd_System_Tracking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="128" />
+    <Property Name="LoggedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="Object" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Action" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="Reference" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="64" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+    <Property Name="TrackingZone" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Catalog_Field">
+    <Key>
+      <PropertyRef Name="FieldId" />
+    </Key>
+    <Property Name="FieldId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="FormlyContent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsRecordCommonField" Type="bit" Nullable="false" />
+    <Property Name="IsDocumentCommonField" Type="bit" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DisplayCatalog" Type="bit" Nullable="false" />
+    <Property Name="DisplayReport" Type="bit" Nullable="false" />
+    <Property Name="DisplayReader" Type="bit" Nullable="false" />
+    <Property Name="DisplayReportSearch" Type="bit" Nullable="false" />
+    <Property Name="DisplayReaderSearch" Type="bit" Nullable="false" />
+    <Property Name="CatalogMasterId" Type="uniqueidentifier" />
+    <Property Name="FieldWidth" Type="int" />
+    <Property Name="DataType" Type="varchar" MaxLength="100" />
+    <Property Name="CatalogCode" Type="varchar" MaxLength="100" />
+    <Property Name="fieldName_New" Type="varchar" MaxLength="50" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="256" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Catalog_Item">
+    <Key>
+      <PropertyRef Name="CatalogItemId" />
+    </Key>
+    <Property Name="CatalogItemId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MappedTermId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Order" Type="int" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Catalog_Item_Attribute">
+    <Key>
+      <PropertyRef Name="CatalogItemAttributeId" />
+    </Key>
+    <Property Name="CatalogItemAttributeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CatalogItemId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MetadataFieldId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MetadataFieldName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="NvarcharValue" Type="nvarchar(max)" />
+    <Property Name="IntValue" Type="int" />
+    <Property Name="DatetimeValue" Type="datetime" />
+    <Property Name="BitValue" Type="bit" />
+    <Property Name="VarcharValue" Type="varchar(max)" />
+    <Property Name="GuidValue" Type="uniqueidentifier" />
+    <Property Name="DataType" Type="varchar" MaxLength="50" />
+    <Property Name="MetadataFieldCode" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="JsonValue" Type="nvarchar(max)" />
+    <Property Name="JsonGuidValue" Type="nvarchar(max)" />
+    <Property Name="TimeValue" Type="datetime" />
+    <Property Name="DateValue" Type="date" />
+    <Property Name="YearValue" Type="datetime" />
+    <Property Name="MonthValue" Type="datetime" />
+    <Property Name="TypeDateTime" Type="int" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Catalog_Master">
+    <Key>
+      <PropertyRef Name="CatalogMasterId" />
+    </Key>
+    <Property Name="CatalogMasterId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MetadataTemplateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MappedTermId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MappedVocabularyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="256" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Certificates">
+    <Key>
+      <PropertyRef Name="CertificateId" />
+    </Key>
+    <Property Name="CertificateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+    <Property Name="SerialCert" Type="nvarchar" MaxLength="128" />
+    <Property Name="Cert" Type="ntext" />
+    <Property Name="Used" Type="bit" />
+    <Property Name="OwnCA" Type="nvarchar" MaxLength="256" />
+    <Property Name="OrganizationCA" Type="nvarchar" MaxLength="256" />
+    <Property Name="ValidFrom" Type="datetime" />
+    <Property Name="ValidTo" Type="datetime" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+    <Property Name="CertType" Type="int" />
+    <Property Name="HsmAlias" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="cms_Site">
+    <Key>
+      <PropertyRef Name="SiteId" />
+    </Key>
+    <Property Name="SiteId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SiteName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PhysicalPath" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="DefaultDocument" Type="nvarchar(max)" />
+    <Property Name="HostingErrorMessage" Type="int" />
+    <Property Name="IsHosted" Type="int" />
+    <Property Name="DefaultAddress" Type="nvarchar(max)" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="IISSiteName" Type="nvarchar" MaxLength="512" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Order" Type="int" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="cms_SiteBinding">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SiteId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HostName" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Port" Type="int" Nullable="false" />
+    <Property Name="IpAddress" Type="nvarchar" MaxLength="512" />
+    <Property Name="TypeProtocol" Type="nvarchar" MaxLength="512" />
+  </EntityType>
+  <EntityType Name="Comp_InvCat_InvTemp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CompanyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceCategoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceTemplateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsCertify" Type="bit" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CompanyTypeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Name_F" Type="nvarchar" MaxLength="255" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_F" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Description_F" Type="nvarchar" MaxLength="1024" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Order" Type="int" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+    <Property Name="CityId" Type="uniqueidentifier" />
+    <Property Name="SAPCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Latitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="Longtitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ext" Type="int" />
+    <Property Name="TaxNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Header" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Footer" Type="nvarchar" MaxLength="1024" />
+    <Property Name="EnterpriseName" Type="nvarchar" MaxLength="1024" />
+    <Property Name="EnterpriseAddress" Type="nvarchar(max)" />
+    <Property Name="Picture" Type="nvarchar" MaxLength="450" />
+    <Property Name="FormNo" Type="varchar" MaxLength="50" />
+    <Property Name="Sign" Type="varchar" MaxLength="50" />
+    <Property Name="NewsId" Type="uniqueidentifier" />
+    <Property Name="BankAccountName" Type="nvarchar(max)" />
+    <Property Name="BankName" Type="nvarchar(max)" />
+    <Property Name="BankNumber" Type="nvarchar(max)" />
+    <Property Name="ContactPerson" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="RepresentPerson" Type="nvarchar(max)" />
+    <Property Name="TaxAuthorityId" Type="uniqueidentifier" />
+    <Property Name="AccountId" Type="uniqueidentifier" />
+    <Property Name="SignatureImage" Type="nvarchar(max)" />
+    <Property Name="Domain" Type="nvarchar(max)" />
+    <Property Name="Approved" Type="bit" Nullable="false" />
+    <Property Name="MailContact" Type="nvarchar(max)" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="PortalLink" Type="nvarchar(max)" />
+    <Property Name="IsUsed" Type="bit" Nullable="false" />
+    <Property Name="SignType" Type="int" />
+    <Property Name="DatePoint" Type="int" />
+    <Property Name="Level" Type="int" />
+  </EntityType>
+  <EntityType Name="CompanyType">
+    <Key>
+      <PropertyRef Name="CompanyTypeId" />
+    </Key>
+    <Property Name="CompanyTypeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="512" />
+    <Property Name="Code" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Order" Type="int" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="ConnectApplication">
+    <Key>
+      <PropertyRef Name="ConnectApplicationId" />
+    </Key>
+    <Property Name="ConnectApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="CreatedOnDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="ApplicationName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ConnectHistory">
+    <Key>
+      <PropertyRef Name="ConnectHistoryId" />
+    </Key>
+    <Property Name="ConnectHistoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ConnectApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="InvoiceId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConnectWithInvoice">
+    <Key>
+      <PropertyRef Name="ConnectWithInvoiceId" />
+    </Key>
+    <Property Name="ConnectWithInvoiceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ConnectApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OtherId" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="StatusInvoice" Type="int" Nullable="false" />
+    <Property Name="AdjustmentType" Type="int" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="BankAccountName" Type="nvarchar" MaxLength="256" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="256" />
+    <Property Name="BankNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="512" />
+    <Property Name="Address" Type="nvarchar" MaxLength="512" />
+    <Property Name="Email" Type="nvarchar" MaxLength="64" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="64" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="64" />
+    <Property Name="RepresentPerson" Type="nvarchar" MaxLength="256" />
+    <Property Name="TaxNumber" Type="nvarchar" MaxLength="32" />
+    <Property Name="AccountId" Type="uniqueidentifier" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+    <Property Name="SignatureImage" Type="nvarchar" MaxLength="512" />
+    <Property Name="SerialCert" Type="nvarchar" MaxLength="128" />
+    <Property Name="DeliverMethod" Type="uniqueidentifier" />
+    <Property Name="CC" Type="nvarchar" MaxLength="512" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="Approved" Type="bit" />
+    <Property Name="IsUsed" Type="bit" />
+    <Property Name="InvoiceStatus" Type="int" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="CustomerCode" Type="nvarchar(max)" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+    <Property Name="CustomerType" Type="int" />
+    <Property Name="IdentityNumber" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Decision">
+    <Key>
+      <PropertyRef Name="DecisionId" />
+    </Key>
+    <Property Name="DecisionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentCompany" Type="nvarchar" MaxLength="1024" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="256" />
+    <Property Name="CompanyTaxCode" Type="nvarchar" MaxLength="64" />
+    <Property Name="CompanyAddress" Type="nvarchar" MaxLength="2048" />
+    <Property Name="DecisionNumber" Type="nvarchar" MaxLength="32" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="EffectiveDate" Type="datetime" />
+    <Property Name="Director" Type="nvarchar" MaxLength="128" />
+    <Property Name="Proponent" Type="nvarchar" MaxLength="2048" />
+    <Property Name="Recipients" Type="nvarchar" MaxLength="2048" />
+    <Property Name="City" Type="nvarchar" MaxLength="1024" />
+    <Property Name="EquipmentSystem" Type="nvarchar" MaxLength="2048" />
+    <Property Name="SoftwareApplication" Type="nvarchar" MaxLength="2048" />
+    <Property Name="InvoiceProcess" Type="nvarchar" MaxLength="2048" />
+    <Property Name="ProviderName" Type="nvarchar" MaxLength="2048" />
+    <Property Name="Responsibility" Type="nvarchar" MaxLength="2048" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Decision_Company_Invoice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DecisionId" Type="uniqueidentifier" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+    <Property Name="InvoiceCategoryId" Type="uniqueidentifier" />
+    <Property Name="InvoiceTemplateId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="DM_Position">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Name" Type="nvarchar" MaxLength="350" />
+    <Property Name="Note" Type="nvarchar" MaxLength="550" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Order" Type="int" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="EmailConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="From" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Smtp" Type="nvarchar(max)" />
+    <Property Name="Port" Type="int" />
+    <Property Name="SSL" Type="bit" />
+    <Property Name="SendType" Type="nvarchar(max)" />
+    <Property Name="Order" Type="int" Nullable="false" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime2" Precision="7" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime2" Precision="7" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+    <Property Name="DisplayName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="File_version">
+    <Key>
+      <PropertyRef Name="FileID" />
+      <PropertyRef Name="VersionID" />
+    </Key>
+    <Property Name="FileID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionID" Type="int" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="512" />
+    <Property Name="Title" Type="nvarchar" MaxLength="512" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="128" />
+    <Property Name="Size" Type="bigint" />
+    <Property Name="Width" Type="int" />
+    <Property Name="Height" Type="int" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="SHA1Hash" Type="varchar" MaxLength="512" />
+  </EntityType>
+  <EntityType Name="FileExtension">
+    <Key>
+      <PropertyRef Name="FileExtensionID" />
+    </Key>
+    <Property Name="FileExtensionID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FileType" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="FileExt" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Files">
+    <Key>
+      <PropertyRef Name="FileID" />
+    </Key>
+    <Property Name="FileID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="512" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="512" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="128" />
+    <Property Name="Size" Type="float" />
+    <Property Name="Width" Type="float" />
+    <Property Name="Height" Type="float" />
+    <Property Name="FolderID" Type="uniqueidentifier" />
+    <Property Name="FolderPath" Type="nvarchar" MaxLength="512" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModificationTime" Type="datetime" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="SHA1Hash" Type="varchar" MaxLength="500" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FileThumbnail">
+    <Key>
+      <PropertyRef Name="FileThumbnailID" />
+    </Key>
+    <Property Name="FileThumbnailID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Width" Type="bigint" Nullable="false" />
+    <Property Name="Height" Type="bigint" Nullable="false" />
+    <Property Name="Quality" Type="int" Nullable="false" />
+    <Property Name="Resolution" Type="int" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="FileType" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Folder_access">
+    <Key>
+      <PropertyRef Name="FolderAccessID" />
+    </Key>
+    <Property Name="FolderAccessID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FolderID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccessID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccessType" Type="nvarchar" MaxLength="512" />
+    <Property Name="Status" Type="int" />
+    <Property Name="RoleID" Type="uniqueidentifier" />
+    <Property Name="UserID" Type="uniqueidentifier" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Folders">
+    <Key>
+      <PropertyRef Name="FolderID" />
+    </Key>
+    <Property Name="FolderID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentID" Type="uniqueidentifier" />
+    <Property Name="FolderName" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="FolderPath" Type="nvarchar(max)" />
+    <Property Name="FolderType" Type="int" Nullable="false" />
+    <Property Name="IsProtected" Type="int" Nullable="false" />
+    <Property Name="IsCached" Type="int" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodeID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="idm_Right">
+    <Key>
+      <PropertyRef Name="RightCode" />
+    </Key>
+    <Property Name="RightCode" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="RightName" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Order" Type="int" />
+    <Property Name="IsGroup" Type="bit" Nullable="false" />
+    <Property Name="Level" Type="int" Nullable="false" />
+    <Property Name="GroupCode" Type="nvarchar" MaxLength="256" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="idm_RightsInRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RightCode" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="idm_RightsOfUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RightCode" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="InheritedFromRoles" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Inherited" Type="bit" Nullable="false" />
+    <Property Name="Enable" Type="bit" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceId" />
+    </Key>
+    <Property Name="InvoiceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceCategoryId" Type="uniqueidentifier" />
+    <Property Name="InvoiceTemplateId" Type="uniqueidentifier" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="Data" Type="ntext" />
+    <Property Name="Signature" Type="ntext" />
+    <Property Name="Converted" Type="int" />
+    <Property Name="KindOfService" Type="nvarchar(max)" />
+    <Property Name="PaymentStatus" Type="int" />
+    <Property Name="ArisingDate" Type="datetime" />
+    <Property Name="ProcessInvoiceNote" Type="nvarchar" MaxLength="256" />
+    <Property Name="GrossValue" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="VatAmount0" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="GrossValue0" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="VatAmount5" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="GrossValue5" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="VatAmount10" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="GrossValue10" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Certified" Type="bit" />
+    <Property Name="CertifiedId" Type="nvarchar(max)" />
+    <Property Name="CertifiedData" Type="nvarchar(max)" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="PublishDate" Type="datetime" />
+    <Property Name="CreationBy" Type="uniqueidentifier" />
+    <Property Name="PublishBy" Type="uniqueidentifier" />
+    <Property Name="PaymentMethod" Type="uniqueidentifier" />
+    <Property Name="SellerAppRecordId" Type="nvarchar(max)" />
+    <Property Name="InvoiceAppRecordId" Type="nvarchar(max)" />
+    <Property Name="InvoiceType" Type="nvarchar(max)" />
+    <Property Name="TemplateCode" Type="nvarchar(max)" />
+    <Property Name="InvoiceSeries" Type="nvarchar(max)" />
+    <Property Name="InvoiceNumber" Type="nvarchar(max)" />
+    <Property Name="InvoiceName" Type="nvarchar(max)" />
+    <Property Name="InvoiceIssuedDate" Type="datetime" />
+    <Property Name="SignedDate" Type="datetime" />
+    <Property Name="SubmittedDate" Type="datetime" />
+    <Property Name="ContractNumber" Type="nvarchar(max)" />
+    <Property Name="ContractDate" Type="datetime" />
+    <Property Name="CurrencyCode" Type="nvarchar(max)" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="InvoiceNote" Type="nvarchar(max)" />
+    <Property Name="AdjustmentType" Type="int" />
+    <Property Name="OriginalInvoiceId" Type="uniqueidentifier" />
+    <Property Name="AdditionalReferenceDesc" Type="nvarchar(max)" />
+    <Property Name="AdditionalReferenceDate" Type="datetime" />
+    <Property Name="SellerLegalName" Type="nvarchar(max)" />
+    <Property Name="SellerTaxCode" Type="nvarchar(max)" />
+    <Property Name="SellerAddressLine" Type="nvarchar(max)" />
+    <Property Name="SellerPostalCode" Type="nvarchar(max)" />
+    <Property Name="SellerDistrictName" Type="nvarchar(max)" />
+    <Property Name="SellerCityName" Type="nvarchar(max)" />
+    <Property Name="SellerCountryCode" Type="nvarchar(max)" />
+    <Property Name="SellerPhoneNumber" Type="nvarchar(max)" />
+    <Property Name="SellerFaxNumber" Type="nvarchar(max)" />
+    <Property Name="SellerEmail" Type="nvarchar(max)" />
+    <Property Name="SellerBankName" Type="nvarchar(max)" />
+    <Property Name="SellerBankAccount" Type="nvarchar(max)" />
+    <Property Name="SellerContactPersonName" Type="nvarchar(max)" />
+    <Property Name="SellerSignedPersonName" Type="nvarchar(max)" />
+    <Property Name="SellerSubmittedPersonName" Type="nvarchar(max)" />
+    <Property Name="BuyerDisplayName" Type="nvarchar(max)" />
+    <Property Name="BuyerLegalName" Type="nvarchar(max)" />
+    <Property Name="BuyerTaxCode" Type="nvarchar(max)" />
+    <Property Name="BuyerAddressLine" Type="nvarchar(max)" />
+    <Property Name="BuyerPostalCode" Type="nvarchar(max)" />
+    <Property Name="BuyerDistrictName" Type="nvarchar(max)" />
+    <Property Name="BuyerCityName" Type="nvarchar(max)" />
+    <Property Name="BuyerCountryCode" Type="nvarchar(max)" />
+    <Property Name="BuyerPhoneNumber" Type="nvarchar(max)" />
+    <Property Name="BuyerFaxNumber" Type="nvarchar(max)" />
+    <Property Name="BuyerEmail" Type="nvarchar(max)" />
+    <Property Name="BuyerBankName" Type="nvarchar(max)" />
+    <Property Name="BuyerBankAccount" Type="nvarchar(max)" />
+    <Property Name="SumOfTotalLineAmountWithoutVAT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TotalAmountWithoutVAT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TotalVATAmount" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TotalAmountWithVAT" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TotalAmountWithVATFrn" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="TotalAmountWithVATInWords" Type="nvarchar(max)" />
+    <Property Name="IsTotalAmountPos" Type="bit" />
+    <Property Name="IsTotalVATAmountPos" Type="bit" />
+    <Property Name="IsTotalAmtWithoutVatPos" Type="bit" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IsDiscountAmtPos" Type="bit" />
+    <Property Name="ProductCodes" Type="nvarchar(max)" />
+    <Property Name="PortalLink" Type="nvarchar(max)" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="InvoiceStatus" Type="int" />
+    <Property Name="VatPercentage" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ConvertedStatus" Type="bit" />
+    <Property Name="ConvertedDate" Type="datetime" />
+    <Property Name="InvoiceCode" Type="nvarchar(max)" />
+    <Property Name="TrangThaiXemTraCuuHoaDon" Type="bit" />
+    <Property Name="SkippedInvoiceStatus" Type="bit" />
+    <Property Name="SkippedInvoiceId" Type="uniqueidentifier" />
+    <Property Name="CreatedDateNoSigned" Type="datetime2" Precision="7" />
+    <Property Name="CreatedDateSigned" Type="datetime2" Precision="7" />
+    <Property Name="IsCompanySignReport" Type="bit" />
+    <Property Name="IsCustomerSignReport" Type="bit" />
+    <Property Name="ReportUrl" Type="nvarchar(max)" />
+    <Property Name="ReportFileName" Type="nvarchar(max)" />
+    <Property Name="BuyerCode" Type="nvarchar(max)" />
+    <Property Name="ChangeReportFileName" Type="nvarchar(max)" />
+    <Property Name="ChangeReportUrl" Type="nvarchar(max)" />
+    <Property Name="DeleteReportFileName" Type="nvarchar(max)" />
+    <Property Name="DeleteReportUrl" Type="nvarchar(max)" />
+    <Property Name="IsCompanySignReportChange" Type="bit" />
+    <Property Name="IsCompanySignReportDelete" Type="bit" />
+    <Property Name="IsCustomerSignReportChange" Type="bit" />
+    <Property Name="IsCustomerSignReportDelete" Type="bit" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+    <Property Name="PdfUrl" Type="nvarchar(max)" />
+    <Property Name="EndNumber" Type="float" />
+    <Property Name="EnvironmentFee" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="EnvironmentTax" Type="float" />
+    <Property Name="FromUseDate" Type="datetime2" Precision="7" />
+    <Property Name="StartNumber" Type="float" />
+    <Property Name="ToUseDate" Type="datetime2" Precision="7" />
+    <Property Name="UseNumber" Type="float" />
+    <Property Name="AmountExchanged" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DrainageServicePrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DrainageServiceTaxMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IsOtherApp" Type="bit" />
+  </EntityType>
+  <EntityType Name="InvoiceCategory">
+    <Key>
+      <PropertyRef Name="InvoiceCategoryId" />
+    </Key>
+    <Property Name="InvoiceCategoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="32" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="512" />
+    <Property Name="IsPublic" Type="bit" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="InvoicePayment">
+    <Key>
+      <PropertyRef Name="InvoicePaymentId" />
+    </Key>
+    <Property Name="InvoicePaymentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceId" Type="uniqueidentifier" />
+    <Property Name="PaymentMethod" Type="uniqueidentifier" />
+    <Property Name="PaymentMethodName" Type="nvarchar" MaxLength="64" />
+    <Property Name="PaymentNote" Type="nvarchar" MaxLength="256" />
+    <Property Name="PaymentAmount" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PaymentDueDate" Type="datetime" />
+    <Property Name="PaymentTerm" Type="nvarchar" MaxLength="256" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="128" />
+    <Property Name="BankAccountName" Type="nvarchar" MaxLength="32" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="InvoiceTemplate">
+    <Key>
+      <PropertyRef Name="InvoiceTemplateId" />
+    </Key>
+    <Property Name="InvoiceTemplateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceCategoryId" Type="uniqueidentifier" />
+    <Property Name="TemplateName" Type="nvarchar" MaxLength="1024" />
+    <Property Name="XmlFile" Type="ntext" />
+    <Property Name="XsltFile" Type="ntext" />
+    <Property Name="SchemaFile" Type="ntext" />
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="256" />
+    <Property Name="InvoiceType" Type="nvarchar" MaxLength="256" />
+    <Property Name="InvoiceView" Type="nvarchar" MaxLength="64" />
+    <Property Name="IGenerator" Type="nvarchar" MaxLength="256" />
+    <Property Name="IViewer" Type="nvarchar" MaxLength="256" />
+    <Property Name="CssData" Type="ntext" />
+    <Property Name="CssLogo" Type="ntext" />
+    <Property Name="CssBackground" Type="ntext" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="512" />
+    <Property Name="IsPublic" Type="bit" />
+    <Property Name="IsCertify" Type="bit" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="TemplateCode" Type="nvarchar" MaxLength="32" />
+    <Property Name="BusinessArea" Type="nvarchar" MaxLength="2048" />
+    <Property Name="VatType" Type="int" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Thread" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="Level" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="Logger" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ActionByUserID" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="Exception" Type="varchar" MaxLength="1024" />
+    <Property Name="ModuleID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" />
+    <Property Name="ObjectType" Type="nvarchar" MaxLength="64" />
+    <Property Name="ObjectID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Media_Programmes">
+    <Key>
+      <PropertyRef Name="ProgrammeID" />
+    </Key>
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProgrammeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProgrammeName" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="BroadcastDate" Type="nvarchar(max)" />
+    <Property Name="BroadcastTime" Type="nvarchar(max)" />
+    <Property Name="OrganizationID" Type="uniqueidentifier" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Metadata">
+    <Key>
+      <PropertyRef Name="MetadataID" />
+    </Key>
+    <Property Name="MetadataID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MetadataName" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="MetadataFormat" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Metadata_Field">
+    <Key>
+      <PropertyRef Name="MetadataFieldId" />
+    </Key>
+    <Property Name="MetadataFieldId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="DataType" Type="varchar" MaxLength="50" />
+    <Property Name="FormlyContent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+    <Property Name="Code" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Metadata_Field_Template_Relationship">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MetadataTemplateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MetadataFieldId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Order" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Metadata_Nodetype">
+    <Key>
+      <PropertyRef Name="MetaNodeTypeID" />
+    </Key>
+    <Property Name="MetaNodeTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MetadataID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MetadataName" Type="nvarchar" MaxLength="512" />
+    <Property Name="NoteTypeID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Metadata_Template">
+    <Key>
+      <PropertyRef Name="MetadataTemplateId" />
+    </Key>
+    <Property Name="MetadataTemplateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+    <Property Name="FormConfig" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Navigation">
+    <Key>
+      <PropertyRef Name="NavigationId" />
+    </Key>
+    <Property Name="NavigationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="256" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Order" Type="int" />
+    <Property Name="HasChild" Type="bit" Nullable="false" />
+    <Property Name="UrlRewrite" Type="varchar" MaxLength="512" />
+    <Property Name="IconClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="NavigationName_En" Type="nvarchar" MaxLength="256" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="IdPath" Type="varchar" MaxLength="450" />
+    <Property Name="Path" Type="nvarchar" MaxLength="900" />
+    <Property Name="Level" Type="int" Nullable="false" />
+    <Property Name="SubUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Navigation_Role">
+    <Key>
+      <PropertyRef Name="NavigationRoleId" />
+    </Key>
+    <Property Name="NavigationRoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NavigationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FromSubNavigation" Type="uniqueidentifier" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Node_access">
+    <Key>
+      <PropertyRef Name="NodeAccessID" />
+    </Key>
+    <Property Name="NodeAccessID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccessID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccessType" Type="varchar" MaxLength="128" />
+    <Property Name="RoleID" Type="uniqueidentifier" />
+    <Property Name="UserID" Type="uniqueidentifier" />
+    <Property Name="Enable" Type="int" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Node_files">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FileID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="512" />
+    <Property Name="AbsolutePath" Type="nvarchar(max)" />
+    <Property Name="RelativePath" Type="nvarchar(max)" />
+    <Property Name="FileSrc" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Node_metadata">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MetadataID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MetadataName" Type="nvarchar" MaxLength="512" />
+    <Property Name="MetadataValue" Type="nvarchar(max)" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Node_ref">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodeRefID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RefType" Type="varchar" MaxLength="512" />
+    <Property Name="Description" Type="nvarchar" MaxLength="512" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Node_tags">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TermID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Node_type">
+    <Key>
+      <PropertyRef Name="NodeTypeID" />
+    </Key>
+    <Property Name="NodeTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="512" />
+    <Property Name="Hastitle" Type="int" />
+    <Property Name="Haslabel" Type="int" />
+    <Property Name="Custom" Type="int" />
+    <Property Name="Modified" Type="int" />
+    <Property Name="Locked" Type="int" />
+    <Property Name="Disabled" Type="int" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Node_WorkFlow">
+    <Key>
+      <PropertyRef Name="NodeWorkFlowID" />
+    </Key>
+    <Property Name="NodeWorkFlowID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodeID" Type="uniqueidentifier" />
+    <Property Name="StartByUserName" Type="nvarchar" MaxLength="256" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="StateName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ApprovalResult" Type="nvarchar(max)" />
+    <Property Name="IsApproveByTaper" Type="bit" />
+    <Property Name="IsApproveByManager" Type="bit" />
+  </EntityType>
+  <EntityType Name="Node_WorkFlow_TransitionHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="AllowedToUserNames" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransitionTime" Type="datetime" />
+    <Property Name="Order" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransitionTimeForSort" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="InitialState" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="DestinationState" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="Command" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Node_WorkFlowExt">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodeWorkFlowID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProgrammeID" Type="uniqueidentifier" />
+    <Property Name="TapeCode" Type="nvarchar" MaxLength="128" />
+    <Property Name="EpisodeTitle" Type="nvarchar" MaxLength="512" />
+  </EntityType>
+  <EntityType Name="Nodes">
+    <Key>
+      <PropertyRef Name="NodeID" />
+    </Key>
+    <Property Name="NodeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentNodeID" Type="uniqueidentifier" />
+    <Property Name="NodeTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NodePath" Type="nvarchar(max)" />
+    <Property Name="Title" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="int" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="ModerateUserID" Type="uniqueidentifier" />
+    <Property Name="Node_metadata" Type="nvarchar(max)" />
+    <Property Name="Node_tags" Type="nvarchar(max)" />
+    <Property Name="Node_ref" Type="nvarchar(max)" />
+    <Property Name="Node_files" Type="nvarchar(max)" />
+    <Property Name="Node_access" Type="nvarchar(max)" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_Invoice">
+    <Key>
+      <PropertyRef Name="ProductInvoiceId" />
+    </Key>
+    <Property Name="ProductInvoiceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceId" Type="uniqueidentifier" />
+    <Property Name="LineNumber" Type="int" />
+    <Property Name="ItemCode" Type="nvarchar(max)" />
+    <Property Name="ItemName" Type="nvarchar(max)" />
+    <Property Name="UnitCode" Type="nvarchar(max)" />
+    <Property Name="UnitName" Type="nvarchar(max)" />
+    <Property Name="UnitPrice" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="Quantity" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="ItemTotalAmountWithoutVat" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="VatPercentage" Type="decimal" Precision="7" Scale="3" />
+    <Property Name="VatAmount" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="Promotion" Type="bit" />
+    <Property Name="AdjustmentVatAmount" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IsIncreaseItem" Type="bit" />
+    <Property Name="ItemTotalAmountWithVat" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="LotNumber" Type="nvarchar(max)" />
+    <Property Name="ExpirationDate" Type="datetime" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+    <Property Name="ItemType" Type="int" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+    <Property Name="TypeOfProduct" Type="uniqueidentifier" />
+    <Property Name="Unit" Type="uniqueidentifier" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="BarCode" Type="nvarchar(max)" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="ShortName" Type="nvarchar(max)" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="NodeId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Tax" Type="float" />
+    <Property Name="Order" Type="int" />
+    <Property Name="PriceBeforeVAT" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="DiscountPercent" Type="float" />
+    <Property Name="AmountBeforeVAT" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="VATPercent" Type="float" />
+    <Property Name="PriceAfterVAT" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TotalAmountAfterVAT" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+    <Property Name="UnitName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Publish_Announcement">
+    <Key>
+      <PropertyRef Name="PublishAnnouncementId" />
+    </Key>
+    <Property Name="PublishAnnouncementId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="256" />
+    <Property Name="CompanyTaxCode" Type="nvarchar" MaxLength="64" />
+    <Property Name="CompanyAddress" Type="nvarchar" MaxLength="2048" />
+    <Property Name="CompanyPhone" Type="nvarchar" MaxLength="256" />
+    <Property Name="TaxAuthorityId" Type="uniqueidentifier" />
+    <Property Name="Delimiter" Type="nvarchar" MaxLength="2048" />
+    <Property Name="City" Type="nvarchar" MaxLength="1024" />
+    <Property Name="PublishDate" Type="datetime" />
+    <Property Name="Representative" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Publish_Invoice_Template">
+    <Key>
+      <PropertyRef Name="PublishInvoiceTemplateId" />
+    </Key>
+    <Property Name="PublishInvoiceTemplateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PublishAnnouncementId" Type="uniqueidentifier" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+    <Property Name="InvoiceCategoryId" Type="uniqueidentifier" />
+    <Property Name="InvoiceTemplateId" Type="uniqueidentifier" />
+    <Property Name="InvoiceSeries" Type="nvarchar" MaxLength="8" />
+    <Property Name="TotalNumber" Type="int" />
+    <Property Name="FromNumber" Type="nvarchar" MaxLength="8" />
+    <Property Name="ToNumber" Type="nvarchar" MaxLength="8" />
+    <Property Name="CurrentNumber" Type="nvarchar" MaxLength="8" />
+    <Property Name="RestNumber" Type="int" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Recent_files">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RecentFileID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Recent_folders">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RecentFolderID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Recent_roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RecentRoleID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Recent_users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RecentUserID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Right">
+    <Key>
+      <PropertyRef Name="RightID" />
+    </Key>
+    <Property Name="RightID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentRightID" Type="uniqueidentifier" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RightCode" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="RightName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Order" Type="int" />
+    <Property Name="HasChild" Type="bit" Nullable="false" />
+    <Property Name="UrlRewrite" Type="varchar" MaxLength="512" />
+    <Property Name="IconClass" Type="varchar" MaxLength="512" />
+  </EntityType>
+  <EntityType Name="Right_Role">
+    <Key>
+      <PropertyRef Name="RightRoleID" />
+    </Key>
+    <Property Name="RightRoleID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RightID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RightName" Type="nvarchar" MaxLength="256" />
+    <Property Name="RightCode" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="SendEmailHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceId" Type="uniqueidentifier" />
+    <Property Name="To" Type="nvarchar(max)" />
+    <Property Name="CC" Type="nvarchar(max)" />
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="SendingDate" Type="datetime2" Precision="7" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime2" Precision="7" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime2" Precision="7" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="SkippedInvoice">
+    <Key>
+      <PropertyRef Name="SkippedInvoiceId" />
+    </Key>
+    <Property Name="SkippedInvoiceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PublishInvoiceTemplateId" Type="uniqueidentifier" />
+    <Property Name="FromNumber" Type="nvarchar(max)" />
+    <Property Name="ToNumber" Type="nvarchar(max)" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime2" Precision="7" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime2" Precision="7" />
+    <Property Name="CompanyId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="SystemParameter">
+    <Key>
+      <PropertyRef Name="ParameterID" />
+    </Key>
+    <Property Name="ParameterID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParameterCode" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="512" />
+    <Property Name="ParameterValue" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOnDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedByUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastModifiedOnDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaxAuthority">
+    <Key>
+      <PropertyRef Name="TaxAuthorityId" />
+    </Key>
+    <Property Name="TaxAuthorityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Address" Type="nvarchar" MaxLength="512" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="32" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Visible" Type="bit" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Taxonomy_ScopeTypes">
+    <Key>
+      <PropertyRef Name="ScopeTypeID" />
+    </Key>
+    <Property Name="ScopeTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ScopeType" Type="nvarchar" MaxLength="256" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Taxonomy_Term">
+    <Key>
+      <PropertyRef Name="TermId" />
+    </Key>
+    <Property Name="TermId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VocabularyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Weight" Type="int" Nullable="false" />
+    <Property Name="TermLeft" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TermRight" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Order" Type="int" />
+    <Property Name="VocabularyCode" Type="varchar" MaxLength="256" />
+    <Property Name="ChildCount" Type="int" />
+    <Property Name="IdPath" Type="varchar" MaxLength="900" />
+    <Property Name="Path" Type="nvarchar" MaxLength="450" />
+    <Property Name="Level" Type="int" />
+  </EntityType>
+  <EntityType Name="Taxonomy_Vocabulary">
+    <Key>
+      <PropertyRef Name="VocabularyId" />
+    </Key>
+    <Property Name="VocabularyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VocabularyTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Weight" Type="int" Nullable="false" />
+    <Property Name="CreatedByUserId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnDate" Type="datetime" />
+    <Property Name="LastModifiedByUserId" Type="uniqueidentifier" />
+    <Property Name="LastModifiedOnDate" Type="datetime" />
+    <Property Name="IsSystem" Type="bit" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="Taxonomy_VocabularyTypes">
+    <Key>
+      <PropertyRef Name="VocabularyTypeID" />
+    </Key>
+    <Property Name="VocabularyTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VocabularyType" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="ApplicationID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users_Position_Relationships">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="User_Id" Type="uniqueidentifier" />
+    <Property Name="Position_Id" Type="uniqueidentifier" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Workflow_Document">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="AuthorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmloyeeControlerId" Type="uniqueidentifier" />
+    <Property Name="Sum" Type="money" Nullable="false" />
+    <Property Name="State" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="StateName" Type="nvarchar" MaxLength="1024" />
+    <Property Name="IsDenialPreExecute" Type="bit" />
+  </EntityType>
+  <EntityType Name="Workflow_DocumentTransitionHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DocumentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" />
+    <Property Name="AllowedToEmployeeNames" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransitionTime" Type="datetime" />
+    <Property Name="Order" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransitionTimeForSort" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="InitialState" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="DestinationState" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="Command" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="IsDenial" Type="bit" />
+    <Property Name="InitialTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Workflow_Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="StructDivisionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsHead" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Workflow_EmployeeRole">
+    <Key>
+      <PropertyRef Name="EmloyeeId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="EmloyeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Workflow_Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Workflow_StructDivision">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="WorkflowGlobalParameter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkflowInbox">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProcessId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdentityId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkflowProcessInstance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StateName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ActivityName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SchemeId" Type="uniqueidentifier" />
+    <Property Name="PreviousState" Type="nvarchar(max)" />
+    <Property Name="PreviousStateForDirect" Type="nvarchar(max)" />
+    <Property Name="PreviousStateForReverse" Type="nvarchar(max)" />
+    <Property Name="PreviousActivity" Type="nvarchar(max)" />
+    <Property Name="PreviousActivityForDirect" Type="nvarchar(max)" />
+    <Property Name="PreviousActivityForReverse" Type="nvarchar(max)" />
+    <Property Name="IsDeterminingParametersChanged" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkflowProcessInstancePersistence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProcessId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParameterName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Value" Type="ntext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkflowProcessInstanceStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Lock" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkflowProcessScheme">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Scheme" Type="ntext" Nullable="false" />
+    <Property Name="DefiningParameters" Type="ntext" Nullable="false" />
+    <Property Name="DefiningParametersHash" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="SchemeCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsObsolete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkflowProcessTimer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProcessId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NextExecutionDateTime" Type="datetime" Nullable="false" />
+    <Property Name="Ignore" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkflowProcessTransitionHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProcessId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ExecutorIdentityId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ActorIdentityId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FromActivityName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ToActivityName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ToStateName" Type="nvarchar(max)" />
+    <Property Name="TransitionTime" Type="datetime" Nullable="false" />
+    <Property Name="TransitionClassifier" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsFinalised" Type="bit" Nullable="false" />
+    <Property Name="FromStateName" Type="nvarchar(max)" />
+    <Property Name="TriggerName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="WorkflowScheme">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Scheme" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="DisplayStatus" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="WorkflowScheme_Document">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SchemeCode" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="DocumentId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__UserI__4B7734FF">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__4A4E069C">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__4B422AD5">
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="Self.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__4C364F0E">
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__4D2A7347">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__72910220">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="Self.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro_roles_Appli__498EEC8D">
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_Roles_Scheme_Relationships" Type="Self.aspnet_Roles_Scheme_Relationships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles_Scheme_Relationships">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro_scheme_Appli__498EEC8D">
+    <End Role="WorkflowScheme" Type="Self.WorkflowScheme" Multiplicity="1" />
+    <End Role="aspnet_Roles_Scheme_Relationships" Type="Self.aspnet_Roles_Scheme_Relationships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkflowScheme">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="aspnet_Roles_Scheme_Relationships">
+        <PropertyRef Name="SchemeCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__RoleI__503BEA1C">
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__UserI__57A801BA">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__bsd_Syste__UserI__21A0F6C4">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="bsd_System_Tracking" Type="Self.bsd_System_Tracking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="bsd_System_Tracking">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__idm_Right__Group__153B1FDF">
+    <End Role="idm_Right" Type="Self.idm_Right" Multiplicity="0..1" />
+    <End Role="idm_Right1" Type="Self.idm_Right" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="idm_Right">
+        <PropertyRef Name="RightCode" />
+      </Principal>
+      <Dependent Role="idm_Right1">
+        <PropertyRef Name="GroupCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_Membership_cms_Site_CmsSiteSiteId">
+    <End Role="cms_Site" Type="Self.cms_Site" Multiplicity="0..1" />
+    <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cms_Site">
+        <PropertyRef Name="SiteId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="CmsSiteSiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_Organizations_aspnet_Organizations">
+    <End Role="aspnet_Organizations" Type="Self.aspnet_Organizations" Multiplicity="1" />
+    <End Role="aspnet_Organizations1" Type="Self.aspnet_Organizations" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Organizations">
+        <PropertyRef Name="OrganizationID" />
+      </Principal>
+      <Dependent Role="aspnet_Organizations1">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_RolesInOrganization_aspnet_Organizations">
+    <End Role="aspnet_Organizations" Type="Self.aspnet_Organizations" Multiplicity="1" />
+    <End Role="aspnet_RolesInOrganization" Type="Self.aspnet_RolesInOrganization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Organizations">
+        <PropertyRef Name="OrganizationID" />
+      </Principal>
+      <Dependent Role="aspnet_RolesInOrganization">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_RolesInOrganization_aspnet_Roles">
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_RolesInOrganization" Type="Self.aspnet_RolesInOrganization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_RolesInOrganization">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_Users_aspnet_Users">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Users1" Type="Self.aspnet_Users" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Users1">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_Users_cms_Site_CmsSiteSiteId">
+    <End Role="cms_Site" Type="Self.cms_Site" Multiplicity="0..1" />
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cms_Site">
+        <PropertyRef Name="SiteId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="CmsSiteSiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_UsersInOrganization_aspnet_Organizations">
+    <End Role="aspnet_Organizations" Type="Self.aspnet_Organizations" Multiplicity="1" />
+    <End Role="aspnet_UsersInOrganization" Type="Self.aspnet_UsersInOrganization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Organizations">
+        <PropertyRef Name="OrganizationID" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInOrganization">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_UsersInOrganization_aspnet_Users">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_UsersInOrganization" Type="Self.aspnet_UsersInOrganization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInOrganization">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_catalog_Field_Catalog_Master">
+    <End Role="Catalog_Master" Type="Self.Catalog_Master" Multiplicity="0..1" />
+    <End Role="Catalog_Field" Type="Self.Catalog_Field" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catalog_Master">
+        <PropertyRef Name="CatalogMasterId" />
+      </Principal>
+      <Dependent Role="Catalog_Field">
+        <PropertyRef Name="CatalogMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Catalog_Item_Attribute_Catalog_Item">
+    <End Role="Catalog_Item" Type="Self.Catalog_Item" Multiplicity="1" />
+    <End Role="Catalog_Item_Attribute" Type="Self.Catalog_Item_Attribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catalog_Item">
+        <PropertyRef Name="CatalogItemId" />
+      </Principal>
+      <Dependent Role="Catalog_Item_Attribute">
+        <PropertyRef Name="CatalogItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Catalog_Item_Taxonomy_Term">
+    <End Role="Taxonomy_Term" Type="Self.Taxonomy_Term" Multiplicity="1" />
+    <End Role="Catalog_Item" Type="Self.Catalog_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taxonomy_Term">
+        <PropertyRef Name="TermId" />
+      </Principal>
+      <Dependent Role="Catalog_Item">
+        <PropertyRef Name="MappedTermId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Catalog_Master_Taxonomy_Vocabulary">
+    <End Role="Taxonomy_Vocabulary" Type="Self.Taxonomy_Vocabulary" Multiplicity="1" />
+    <End Role="Catalog_Master" Type="Self.Catalog_Master" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taxonomy_Vocabulary">
+        <PropertyRef Name="VocabularyId" />
+      </Principal>
+      <Dependent Role="Catalog_Master">
+        <PropertyRef Name="MappedVocabularyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Certificates_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Certificates" Type="Self.Certificates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="Certificates">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comp_InvCat_InvTemp_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="Comp_InvCat_InvTemp" Type="Self.Comp_InvCat_InvTemp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="Comp_InvCat_InvTemp">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comp_InvCat_InvTemp_InvoiceCategory">
+    <End Role="InvoiceCategory" Type="Self.InvoiceCategory" Multiplicity="1" />
+    <End Role="Comp_InvCat_InvTemp" Type="Self.Comp_InvCat_InvTemp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvoiceCategory">
+        <PropertyRef Name="InvoiceCategoryId" />
+      </Principal>
+      <Dependent Role="Comp_InvCat_InvTemp">
+        <PropertyRef Name="InvoiceCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comp_InvCat_InvTemp_InvoiceTemplate">
+    <End Role="InvoiceTemplate" Type="Self.InvoiceTemplate" Multiplicity="1" />
+    <End Role="Comp_InvCat_InvTemp" Type="Self.Comp_InvCat_InvTemp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvoiceTemplate">
+        <PropertyRef Name="InvoiceTemplateId" />
+      </Principal>
+      <Dependent Role="Comp_InvCat_InvTemp">
+        <PropertyRef Name="InvoiceTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company_TaxAuthority">
+    <End Role="TaxAuthority" Type="Self.TaxAuthority" Multiplicity="0..1" />
+    <End Role="Company" Type="Self.Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxAuthority">
+        <PropertyRef Name="TaxAuthorityId" />
+      </Principal>
+      <Dependent Role="Company">
+        <PropertyRef Name="TaxAuthorityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_aspnet_Users">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Decision_Company_Invoice_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Decision_Company_Invoice" Type="Self.Decision_Company_Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="Decision_Company_Invoice">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Decision_Company_Invoice_Decision">
+    <End Role="Decision" Type="Self.Decision" Multiplicity="0..1" />
+    <End Role="Decision_Company_Invoice" Type="Self.Decision_Company_Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Decision">
+        <PropertyRef Name="DecisionId" />
+      </Principal>
+      <Dependent Role="Decision_Company_Invoice">
+        <PropertyRef Name="DecisionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Decision_Company_Invoice_InvoiceCategory">
+    <End Role="InvoiceCategory" Type="Self.InvoiceCategory" Multiplicity="0..1" />
+    <End Role="Decision_Company_Invoice" Type="Self.Decision_Company_Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvoiceCategory">
+        <PropertyRef Name="InvoiceCategoryId" />
+      </Principal>
+      <Dependent Role="Decision_Company_Invoice">
+        <PropertyRef Name="InvoiceCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Decision_Company_Invoice_InvoiceTemplate">
+    <End Role="InvoiceTemplate" Type="Self.InvoiceTemplate" Multiplicity="0..1" />
+    <End Role="Decision_Company_Invoice" Type="Self.Decision_Company_Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvoiceTemplate">
+        <PropertyRef Name="InvoiceTemplateId" />
+      </Principal>
+      <Dependent Role="Decision_Company_Invoice">
+        <PropertyRef Name="InvoiceTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_File_version_Files">
+    <End Role="Files" Type="Self.Files" Multiplicity="1" />
+    <End Role="File_version" Type="Self.File_version" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Files">
+        <PropertyRef Name="FileID" />
+      </Principal>
+      <Dependent Role="File_version">
+        <PropertyRef Name="FileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FileExtention_aspnet_Applications">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="FileExtension" Type="Self.FileExtension" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="FileExtension">
+        <PropertyRef Name="ApplicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FileExtention_aspnet_Users">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="FileExtension" Type="Self.FileExtension" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="FileExtension">
+        <PropertyRef Name="CreatedByUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FileExtention_aspnet_Users1">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="FileExtension" Type="Self.FileExtension" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="FileExtension">
+        <PropertyRef Name="LastModifiedByUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Files_Folders">
+    <End Role="Folders" Type="Self.Folders" Multiplicity="0..1" />
+    <End Role="Files" Type="Self.Files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Folders">
+        <PropertyRef Name="FolderID" />
+      </Principal>
+      <Dependent Role="Files">
+        <PropertyRef Name="FolderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FileThumbnail_aspnet_Users">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="FileThumbnail" Type="Self.FileThumbnail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="FileThumbnail">
+        <PropertyRef Name="CreatedByUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FileThumbnail_aspnet_Users1">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="FileThumbnail" Type="Self.FileThumbnail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="FileThumbnail">
+        <PropertyRef Name="LastModifiedByUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Folder_access_AccessList">
+    <End Role="AccessList" Type="Self.AccessList" Multiplicity="1" />
+    <End Role="Folder_access" Type="Self.Folder_access" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccessList">
+        <PropertyRef Name="AccessID" />
+      </Principal>
+      <Dependent Role="Folder_access">
+        <PropertyRef Name="AccessID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Folder_access_Folders">
+    <End Role="Folders" Type="Self.Folders" Multiplicity="1" />
+    <End Role="Folder_access" Type="Self.Folder_access" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Folders">
+        <PropertyRef Name="FolderID" />
+      </Principal>
+      <Dependent Role="Folder_access">
+        <PropertyRef Name="FolderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Folders_Nodes">
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="1" />
+    <End Role="Folders" Type="Self.Folders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="NodeID" />
+      </Principal>
+      <Dependent Role="Folders">
+        <PropertyRef Name="NodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceTemplate_InvoiceCategory">
+    <End Role="InvoiceCategory" Type="Self.InvoiceCategory" Multiplicity="0..1" />
+    <End Role="InvoiceTemplate" Type="Self.InvoiceTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvoiceCategory">
+        <PropertyRef Name="InvoiceCategoryId" />
+      </Principal>
+      <Dependent Role="InvoiceTemplate">
+        <PropertyRef Name="InvoiceCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Log_aspnet_Users">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="Log" Type="Self.Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Log">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Master_Category_Metadata_Template">
+    <End Role="Metadata_Template" Type="Self.Metadata_Template" Multiplicity="1" />
+    <End Role="Catalog_Master" Type="Self.Catalog_Master" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metadata_Template">
+        <PropertyRef Name="MetadataTemplateId" />
+      </Principal>
+      <Dependent Role="Catalog_Master">
+        <PropertyRef Name="MetadataTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Master_Category_Taxonomy_Term">
+    <End Role="Taxonomy_Term" Type="Self.Taxonomy_Term" Multiplicity="1" />
+    <End Role="Catalog_Master" Type="Self.Catalog_Master" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taxonomy_Term">
+        <PropertyRef Name="TermId" />
+      </Principal>
+      <Dependent Role="Catalog_Master">
+        <PropertyRef Name="MappedTermId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_mdm_Core_Metadata_Field_In_Template_mdm_Core_Metadata_Field">
+    <End Role="Metadata_Field" Type="Self.Metadata_Field" Multiplicity="1" />
+    <End Role="Metadata_Field_Template_Relationship" Type="Self.Metadata_Field_Template_Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metadata_Field">
+        <PropertyRef Name="MetadataFieldId" />
+      </Principal>
+      <Dependent Role="Metadata_Field_Template_Relationship">
+        <PropertyRef Name="MetadataFieldId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_mdm_Core_Metadata_Field_In_Template_mdm_Core_Metadata_Template">
+    <End Role="Metadata_Template" Type="Self.Metadata_Template" Multiplicity="1" />
+    <End Role="Metadata_Field_Template_Relationship" Type="Self.Metadata_Field_Template_Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metadata_Template">
+        <PropertyRef Name="MetadataTemplateId" />
+      </Principal>
+      <Dependent Role="Metadata_Field_Template_Relationship">
+        <PropertyRef Name="MetadataTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Media_Programmes_aspnet_Organizations">
+    <End Role="aspnet_Organizations" Type="Self.aspnet_Organizations" Multiplicity="0..1" />
+    <End Role="Media_Programmes" Type="Self.Media_Programmes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Organizations">
+        <PropertyRef Name="OrganizationID" />
+      </Principal>
+      <Dependent Role="Media_Programmes">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Metadata_Nodetype_Metadata">
+    <End Role="Metadata" Type="Self.Metadata" Multiplicity="1" />
+    <End Role="Metadata_Nodetype" Type="Self.Metadata_Nodetype" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metadata">
+        <PropertyRef Name="MetadataID" />
+      </Principal>
+      <Dependent Role="Metadata_Nodetype">
+        <PropertyRef Name="MetadataID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Metadata_Nodetype_Node_type">
+    <End Role="Node_type" Type="Self.Node_type" Multiplicity="1" />
+    <End Role="Metadata_Nodetype" Type="Self.Metadata_Nodetype" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Node_type">
+        <PropertyRef Name="NodeTypeID" />
+      </Principal>
+      <Dependent Role="Metadata_Nodetype">
+        <PropertyRef Name="NoteTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Metadata_Term_Metadata_Field">
+    <End Role="Metadata_Field" Type="Self.Metadata_Field" Multiplicity="1" />
+    <End Role="Catalog_Item_Attribute" Type="Self.Catalog_Item_Attribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metadata_Field">
+        <PropertyRef Name="MetadataFieldId" />
+      </Principal>
+      <Dependent Role="Catalog_Item_Attribute">
+        <PropertyRef Name="MetadataFieldId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Navigation_Navigation">
+    <End Role="Navigation" Type="Self.Navigation" Multiplicity="0..1" />
+    <End Role="Navigation1" Type="Self.Navigation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Navigation">
+        <PropertyRef Name="NavigationId" />
+      </Principal>
+      <Dependent Role="Navigation1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Navigation_Role_Navigation">
+    <End Role="Navigation" Type="Self.Navigation" Multiplicity="1" />
+    <End Role="Navigation_Role" Type="Self.Navigation_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Navigation">
+        <PropertyRef Name="NavigationId" />
+      </Principal>
+      <Dependent Role="Navigation_Role">
+        <PropertyRef Name="NavigationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_access_AccessList">
+    <End Role="AccessList" Type="Self.AccessList" Multiplicity="1" />
+    <End Role="Node_access" Type="Self.Node_access" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccessList">
+        <PropertyRef Name="AccessID" />
+      </Principal>
+      <Dependent Role="Node_access">
+        <PropertyRef Name="AccessID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_access_Nodes">
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="1" />
+    <End Role="Node_access" Type="Self.Node_access" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="NodeID" />
+      </Principal>
+      <Dependent Role="Node_access">
+        <PropertyRef Name="NodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_ExploitationExt_Media_Programmes">
+    <End Role="Media_Programmes" Type="Self.Media_Programmes" Multiplicity="0..1" />
+    <End Role="Node_WorkFlowExt" Type="Self.Node_WorkFlowExt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Media_Programmes">
+        <PropertyRef Name="ProgrammeID" />
+      </Principal>
+      <Dependent Role="Node_WorkFlowExt">
+        <PropertyRef Name="ProgrammeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_files_Files">
+    <End Role="Files" Type="Self.Files" Multiplicity="1" />
+    <End Role="Node_files" Type="Self.Node_files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Files">
+        <PropertyRef Name="FileID" />
+      </Principal>
+      <Dependent Role="Node_files">
+        <PropertyRef Name="FileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_files_Nodes">
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="1" />
+    <End Role="Node_files" Type="Self.Node_files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="NodeID" />
+      </Principal>
+      <Dependent Role="Node_files">
+        <PropertyRef Name="NodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_metadata_Metadata">
+    <End Role="Metadata" Type="Self.Metadata" Multiplicity="1" />
+    <End Role="Node_metadata" Type="Self.Node_metadata" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metadata">
+        <PropertyRef Name="MetadataID" />
+      </Principal>
+      <Dependent Role="Node_metadata">
+        <PropertyRef Name="MetadataID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_metadata_Nodes">
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="1" />
+    <End Role="Node_metadata" Type="Self.Node_metadata" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="NodeID" />
+      </Principal>
+      <Dependent Role="Node_metadata">
+        <PropertyRef Name="NodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_ref_Nodes">
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="1" />
+    <End Role="Node_ref" Type="Self.Node_ref" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="NodeID" />
+      </Principal>
+      <Dependent Role="Node_ref">
+        <PropertyRef Name="NodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_ref_Nodes1">
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="1" />
+    <End Role="Node_ref" Type="Self.Node_ref" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="NodeID" />
+      </Principal>
+      <Dependent Role="Node_ref">
+        <PropertyRef Name="NodeRefID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_tags_Nodes">
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="1" />
+    <End Role="Node_tags" Type="Self.Node_tags" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="NodeID" />
+      </Principal>
+      <Dependent Role="Node_tags">
+        <PropertyRef Name="NodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_tags_Taxonomy_Terms">
+    <End Role="Taxonomy_Term" Type="Self.Taxonomy_Term" Multiplicity="1" />
+    <End Role="Node_tags" Type="Self.Node_tags" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taxonomy_Term">
+        <PropertyRef Name="TermId" />
+      </Principal>
+      <Dependent Role="Node_tags">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_WorkFlow_Nodes">
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="0..1" />
+    <End Role="Node_WorkFlow" Type="Self.Node_WorkFlow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="NodeID" />
+      </Principal>
+      <Dependent Role="Node_WorkFlow">
+        <PropertyRef Name="NodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_WorkFlow_TransitionHistory_Nodes">
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="1" />
+    <End Role="Node_WorkFlow_TransitionHistory" Type="Self.Node_WorkFlow_TransitionHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="NodeID" />
+      </Principal>
+      <Dependent Role="Node_WorkFlow_TransitionHistory">
+        <PropertyRef Name="NodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Node_WorkFlowExt_Node_WorkFlow">
+    <End Role="Node_WorkFlow" Type="Self.Node_WorkFlow" Multiplicity="1" />
+    <End Role="Node_WorkFlowExt" Type="Self.Node_WorkFlowExt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Node_WorkFlow">
+        <PropertyRef Name="NodeWorkFlowID" />
+      </Principal>
+      <Dependent Role="Node_WorkFlowExt">
+        <PropertyRef Name="NodeWorkFlowID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nodes_Node_type">
+    <End Role="Node_type" Type="Self.Node_type" Multiplicity="1" />
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Node_type">
+        <PropertyRef Name="NodeTypeID" />
+      </Principal>
+      <Dependent Role="Nodes">
+        <PropertyRef Name="NodeTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nodes_Nodes">
+    <End Role="Nodes" Type="Self.Nodes" Multiplicity="0..1" />
+    <End Role="Nodes1" Type="Self.Nodes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="NodeID" />
+      </Principal>
+      <Dependent Role="Nodes1">
+        <PropertyRef Name="ParentNodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Invoice_Invoice">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="0..1" />
+    <End Role="Product_Invoice" Type="Self.Product_Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="InvoiceId" />
+      </Principal>
+      <Dependent Role="Product_Invoice">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Publish_Invoice_Template_Publish_Announcement">
+    <End Role="Publish_Announcement" Type="Self.Publish_Announcement" Multiplicity="0..1" />
+    <End Role="Publish_Invoice_Template" Type="Self.Publish_Invoice_Template" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Publish_Announcement">
+        <PropertyRef Name="PublishAnnouncementId" />
+      </Principal>
+      <Dependent Role="Publish_Invoice_Template">
+        <PropertyRef Name="PublishAnnouncementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recent_files_Files">
+    <End Role="Files" Type="Self.Files" Multiplicity="1" />
+    <End Role="Recent_files" Type="Self.Recent_files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Files">
+        <PropertyRef Name="FileID" />
+      </Principal>
+      <Dependent Role="Recent_files">
+        <PropertyRef Name="RecentFileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recent_folders_Folders">
+    <End Role="Folders" Type="Self.Folders" Multiplicity="1" />
+    <End Role="Recent_folders" Type="Self.Recent_folders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Folders">
+        <PropertyRef Name="FolderID" />
+      </Principal>
+      <Dependent Role="Recent_folders">
+        <PropertyRef Name="RecentFolderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Right_Right">
+    <End Role="Right" Type="Self.Right" Multiplicity="0..1" />
+    <End Role="Right1" Type="Self.Right" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Right">
+        <PropertyRef Name="RightID" />
+      </Principal>
+      <Dependent Role="Right1">
+        <PropertyRef Name="ParentRightID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Right_Role_aspnet_Roles">
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="1" />
+    <End Role="Right_Role" Type="Self.Right_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Right_Role">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Right_Role_aspnet_Roles_1">
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="1" />
+    <End Role="idm_RightsInRole" Type="Self.idm_RightsInRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="idm_RightsInRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Right_Role_Right">
+    <End Role="Right" Type="Self.Right" Multiplicity="1" />
+    <End Role="Right_Role" Type="Self.Right_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Right">
+        <PropertyRef Name="RightID" />
+      </Principal>
+      <Dependent Role="Right_Role">
+        <PropertyRef Name="RightID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RightsInRole_Rights_1">
+    <End Role="idm_Right" Type="Self.idm_Right" Multiplicity="1" />
+    <End Role="idm_RightsInRole" Type="Self.idm_RightsInRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="idm_Right">
+        <PropertyRef Name="RightCode" />
+      </Principal>
+      <Dependent Role="idm_RightsInRole">
+        <PropertyRef Name="RightCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RightsOfUser_aspnet_Users">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="idm_RightsOfUser" Type="Self.idm_RightsOfUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="idm_RightsOfUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RightsOfUser_Rights">
+    <End Role="idm_Right" Type="Self.idm_Right" Multiplicity="1" />
+    <End Role="idm_RightsOfUser" Type="Self.idm_RightsOfUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="idm_Right">
+        <PropertyRef Name="RightCode" />
+      </Principal>
+      <Dependent Role="idm_RightsOfUser">
+        <PropertyRef Name="RightCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Taxonomy_Terms_Taxonomy_Vocabularies">
+    <End Role="Taxonomy_Vocabulary" Type="Self.Taxonomy_Vocabulary" Multiplicity="1" />
+    <End Role="Taxonomy_Term" Type="Self.Taxonomy_Term" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taxonomy_Vocabulary">
+        <PropertyRef Name="VocabularyId" />
+      </Principal>
+      <Dependent Role="Taxonomy_Term">
+        <PropertyRef Name="VocabularyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workflow_Document_aspnet_Users">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
+    <End Role="Workflow_Document" Type="Self.Workflow_Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Workflow_Document">
+        <PropertyRef Name="EmloyeeControlerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workflow_Document_aspnet_Users1">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="Workflow_Document" Type="Self.Workflow_Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Workflow_Document">
+        <PropertyRef Name="AuthorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workflow_DocumentTransitionHistory_aspnet_Users">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
+    <End Role="Workflow_DocumentTransitionHistory" Type="Self.Workflow_DocumentTransitionHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Workflow_DocumentTransitionHistory">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workflow_DocumentTransitionHistory_Workflow_Document">
+    <End Role="Workflow_Document" Type="Self.Workflow_Document" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Workflow_DocumentTransitionHistory" Type="Self.Workflow_DocumentTransitionHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workflow_Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Workflow_DocumentTransitionHistory">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workflow_Employee_Workflow_StructDivision">
+    <End Role="Workflow_StructDivision" Type="Self.Workflow_StructDivision" Multiplicity="1" />
+    <End Role="Workflow_Employee" Type="Self.Workflow_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workflow_StructDivision">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Workflow_Employee">
+        <PropertyRef Name="StructDivisionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workflow_EmployeeRole_Workflow_Employee">
+    <End Role="Workflow_Employee" Type="Self.Workflow_Employee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Workflow_EmployeeRole" Type="Self.Workflow_EmployeeRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workflow_Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Workflow_EmployeeRole">
+        <PropertyRef Name="EmloyeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workflow_EmployeeRole_Workflow_Roles">
+    <End Role="Workflow_Roles" Type="Self.Workflow_Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Workflow_EmployeeRole" Type="Self.Workflow_EmployeeRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workflow_Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Workflow_EmployeeRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workflow_StructDivision_Workflow_StructDivision">
+    <End Role="Workflow_StructDivision" Type="Self.Workflow_StructDivision" Multiplicity="0..1" />
+    <End Role="Workflow_StructDivision1" Type="Self.Workflow_StructDivision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workflow_StructDivision">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Workflow_StructDivision1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkflowScheme_Document_Workflow_Document">
+    <End Role="Workflow_Document" Type="Self.Workflow_Document" Multiplicity="1" />
+    <End Role="WorkflowScheme_Document" Type="Self.WorkflowScheme_Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workflow_Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WorkflowScheme_Document">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkflowScheme_Document_WorkflowScheme">
+    <End Role="WorkflowScheme" Type="Self.WorkflowScheme" Multiplicity="1" />
+    <End Role="WorkflowScheme_Document" Type="Self.WorkflowScheme_Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkflowScheme">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="WorkflowScheme_Document">
+        <PropertyRef Name="SchemeCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EFModelStoreContainer">
+    <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_DatabaseLog" EntityType="Self._DatabaseLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccessList" EntityType="Self.AccessList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Applications" EntityType="Self.aspnet_Applications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Membership" EntityType="Self.aspnet_Membership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Organizations" EntityType="Self.aspnet_Organizations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Paths" EntityType="Self.aspnet_Paths" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="Self.aspnet_PersonalizationAllUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="Self.aspnet_PersonalizationPerUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Profile" EntityType="Self.aspnet_Profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Roles" EntityType="Self.aspnet_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Roles_Scheme_Relationships" EntityType="Self.aspnet_Roles_Scheme_Relationships" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_RolesInOrganization" EntityType="Self.aspnet_RolesInOrganization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="Self.aspnet_SchemaVersions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Users" EntityType="Self.aspnet_Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_UsersInOrganization" EntityType="Self.aspnet_UsersInOrganization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="Self.aspnet_UsersInRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="Self.aspnet_WebEvent_Events" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bsd_System_Tracking" EntityType="Self.bsd_System_Tracking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Catalog_Field" EntityType="Self.Catalog_Field" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Catalog_Item" EntityType="Self.Catalog_Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Catalog_Item_Attribute" EntityType="Self.Catalog_Item_Attribute" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Catalog_Master" EntityType="Self.Catalog_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certificates" EntityType="Self.Certificates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cms_Site" EntityType="Self.cms_Site" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cms_SiteBinding" EntityType="Self.cms_SiteBinding" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comp_InvCat_InvTemp" EntityType="Self.Comp_InvCat_InvTemp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyType" EntityType="Self.CompanyType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConnectApplication" EntityType="Self.ConnectApplication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConnectHistory" EntityType="Self.ConnectHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConnectWithInvoice" EntityType="Self.ConnectWithInvoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Decision" EntityType="Self.Decision" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Decision_Company_Invoice" EntityType="Self.Decision_Company_Invoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DM_Position" EntityType="Self.DM_Position" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmailConfig" EntityType="Self.EmailConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="File_version" EntityType="Self.File_version" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileExtension" EntityType="Self.FileExtension" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Files" EntityType="Self.Files" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileThumbnail" EntityType="Self.FileThumbnail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Folder_access" EntityType="Self.Folder_access" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Folders" EntityType="Self.Folders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="idm_Right" EntityType="Self.idm_Right" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="idm_RightsInRole" EntityType="Self.idm_RightsInRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="idm_RightsOfUser" EntityType="Self.idm_RightsOfUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoiceCategory" EntityType="Self.InvoiceCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoicePayment" EntityType="Self.InvoicePayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoiceTemplate" EntityType="Self.InvoiceTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Media_Programmes" EntityType="Self.Media_Programmes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Metadata" EntityType="Self.Metadata" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Metadata_Field" EntityType="Self.Metadata_Field" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Metadata_Field_Template_Relationship" EntityType="Self.Metadata_Field_Template_Relationship" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Metadata_Nodetype" EntityType="Self.Metadata_Nodetype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Metadata_Template" EntityType="Self.Metadata_Template" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Navigation" EntityType="Self.Navigation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Navigation_Role" EntityType="Self.Navigation_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Node_access" EntityType="Self.Node_access" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Node_files" EntityType="Self.Node_files" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Node_metadata" EntityType="Self.Node_metadata" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Node_ref" EntityType="Self.Node_ref" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Node_tags" EntityType="Self.Node_tags" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Node_type" EntityType="Self.Node_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Node_WorkFlow" EntityType="Self.Node_WorkFlow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Node_WorkFlow_TransitionHistory" EntityType="Self.Node_WorkFlow_TransitionHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Node_WorkFlowExt" EntityType="Self.Node_WorkFlowExt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nodes" EntityType="Self.Nodes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Invoice" EntityType="Self.Product_Invoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Publish_Announcement" EntityType="Self.Publish_Announcement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Publish_Invoice_Template" EntityType="Self.Publish_Invoice_Template" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Recent_files" EntityType="Self.Recent_files" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Recent_folders" EntityType="Self.Recent_folders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Recent_roles" EntityType="Self.Recent_roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Recent_users" EntityType="Self.Recent_users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Right" EntityType="Self.Right" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Right_Role" EntityType="Self.Right_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SendEmailHistory" EntityType="Self.SendEmailHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SkippedInvoice" EntityType="Self.SkippedInvoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemParameter" EntityType="Self.SystemParameter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaxAuthority" EntityType="Self.TaxAuthority" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Taxonomy_ScopeTypes" EntityType="Self.Taxonomy_ScopeTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Taxonomy_Term" EntityType="Self.Taxonomy_Term" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Taxonomy_Vocabulary" EntityType="Self.Taxonomy_Vocabulary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Taxonomy_VocabularyTypes" EntityType="Self.Taxonomy_VocabularyTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users_Position_Relationships" EntityType="Self.Users_Position_Relationships" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workflow_Document" EntityType="Self.Workflow_Document" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workflow_DocumentTransitionHistory" EntityType="Self.Workflow_DocumentTransitionHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workflow_Employee" EntityType="Self.Workflow_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workflow_EmployeeRole" EntityType="Self.Workflow_EmployeeRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workflow_Roles" EntityType="Self.Workflow_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workflow_StructDivision" EntityType="Self.Workflow_StructDivision" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowGlobalParameter" EntityType="Self.WorkflowGlobalParameter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowInbox" EntityType="Self.WorkflowInbox" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowProcessInstance" EntityType="Self.WorkflowProcessInstance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowProcessInstancePersistence" EntityType="Self.WorkflowProcessInstancePersistence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowProcessInstanceStatus" EntityType="Self.WorkflowProcessInstanceStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowProcessScheme" EntityType="Self.WorkflowProcessScheme" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowProcessTimer" EntityType="Self.WorkflowProcessTimer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowProcessTransitionHistory" EntityType="Self.WorkflowProcessTransitionHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowScheme" EntityType="Self.WorkflowScheme" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowScheme_Document" EntityType="Self.WorkflowScheme_Document" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__aspnet_Me__UserI__4B7734FF" Association="Self.FK__aspnet_Me__UserI__4B7734FF">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__4A4E069C" Association="Self.FK__aspnet_Pa__Appli__4A4E069C">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__4B422AD5" Association="Self.FK__aspnet_Pe__PathI__4B422AD5">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__4C364F0E" Association="Self.FK__aspnet_Pe__PathI__4C364F0E">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__4D2A7347" Association="Self.FK__aspnet_Pe__UserI__4D2A7347">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__72910220" Association="Self.FK__aspnet_Pr__UserI__72910220">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro_roles_Appli__498EEC8D" Association="Self.FK__aspnet_Ro_roles_Appli__498EEC8D">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_Roles_Scheme_Relationships" EntitySet="aspnet_Roles_Scheme_Relationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro_scheme_Appli__498EEC8D" Association="Self.FK__aspnet_Ro_scheme_Appli__498EEC8D">
+      <End Role="WorkflowScheme" EntitySet="WorkflowScheme" />
+      <End Role="aspnet_Roles_Scheme_Relationships" EntitySet="aspnet_Roles_Scheme_Relationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__RoleI__503BEA1C" Association="Self.FK__aspnet_Us__RoleI__503BEA1C">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__UserI__57A801BA" Association="Self.FK__aspnet_Us__UserI__57A801BA">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__bsd_Syste__UserI__21A0F6C4" Association="Self.FK__bsd_Syste__UserI__21A0F6C4">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="bsd_System_Tracking" EntitySet="bsd_System_Tracking" />
+    </AssociationSet>
+    <AssociationSet Name="FK__idm_Right__Group__153B1FDF" Association="Self.FK__idm_Right__Group__153B1FDF">
+      <End Role="idm_Right" EntitySet="idm_Right" />
+      <End Role="idm_Right1" EntitySet="idm_Right" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_Membership_cms_Site_CmsSiteSiteId" Association="Self.FK_aspnet_Membership_cms_Site_CmsSiteSiteId">
+      <End Role="cms_Site" EntitySet="cms_Site" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_Organizations_aspnet_Organizations" Association="Self.FK_aspnet_Organizations_aspnet_Organizations">
+      <End Role="aspnet_Organizations" EntitySet="aspnet_Organizations" />
+      <End Role="aspnet_Organizations1" EntitySet="aspnet_Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_RolesInOrganization_aspnet_Organizations" Association="Self.FK_aspnet_RolesInOrganization_aspnet_Organizations">
+      <End Role="aspnet_Organizations" EntitySet="aspnet_Organizations" />
+      <End Role="aspnet_RolesInOrganization" EntitySet="aspnet_RolesInOrganization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_RolesInOrganization_aspnet_Roles" Association="Self.FK_aspnet_RolesInOrganization_aspnet_Roles">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_RolesInOrganization" EntitySet="aspnet_RolesInOrganization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_Users_aspnet_Users" Association="Self.FK_aspnet_Users_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Users1" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_Users_cms_Site_CmsSiteSiteId" Association="Self.FK_aspnet_Users_cms_Site_CmsSiteSiteId">
+      <End Role="cms_Site" EntitySet="cms_Site" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_UsersInOrganization_aspnet_Organizations" Association="Self.FK_aspnet_UsersInOrganization_aspnet_Organizations">
+      <End Role="aspnet_Organizations" EntitySet="aspnet_Organizations" />
+      <End Role="aspnet_UsersInOrganization" EntitySet="aspnet_UsersInOrganization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_UsersInOrganization_aspnet_Users" Association="Self.FK_aspnet_UsersInOrganization_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInOrganization" EntitySet="aspnet_UsersInOrganization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_catalog_Field_Catalog_Master" Association="Self.FK_catalog_Field_Catalog_Master">
+      <End Role="Catalog_Master" EntitySet="Catalog_Master" />
+      <End Role="Catalog_Field" EntitySet="Catalog_Field" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Catalog_Item_Attribute_Catalog_Item" Association="Self.FK_Catalog_Item_Attribute_Catalog_Item">
+      <End Role="Catalog_Item" EntitySet="Catalog_Item" />
+      <End Role="Catalog_Item_Attribute" EntitySet="Catalog_Item_Attribute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Catalog_Item_Taxonomy_Term" Association="Self.FK_Catalog_Item_Taxonomy_Term">
+      <End Role="Taxonomy_Term" EntitySet="Taxonomy_Term" />
+      <End Role="Catalog_Item" EntitySet="Catalog_Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Catalog_Master_Taxonomy_Vocabulary" Association="Self.FK_Catalog_Master_Taxonomy_Vocabulary">
+      <End Role="Taxonomy_Vocabulary" EntitySet="Taxonomy_Vocabulary" />
+      <End Role="Catalog_Master" EntitySet="Catalog_Master" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Certificates_Company" Association="Self.FK_Certificates_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Certificates" EntitySet="Certificates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comp_InvCat_InvTemp_Company" Association="Self.FK_Comp_InvCat_InvTemp_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Comp_InvCat_InvTemp" EntitySet="Comp_InvCat_InvTemp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comp_InvCat_InvTemp_InvoiceCategory" Association="Self.FK_Comp_InvCat_InvTemp_InvoiceCategory">
+      <End Role="InvoiceCategory" EntitySet="InvoiceCategory" />
+      <End Role="Comp_InvCat_InvTemp" EntitySet="Comp_InvCat_InvTemp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comp_InvCat_InvTemp_InvoiceTemplate" Association="Self.FK_Comp_InvCat_InvTemp_InvoiceTemplate">
+      <End Role="InvoiceTemplate" EntitySet="InvoiceTemplate" />
+      <End Role="Comp_InvCat_InvTemp" EntitySet="Comp_InvCat_InvTemp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company_TaxAuthority" Association="Self.FK_Company_TaxAuthority">
+      <End Role="TaxAuthority" EntitySet="TaxAuthority" />
+      <End Role="Company" EntitySet="Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_aspnet_Users" Association="Self.FK_Customer_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Company" Association="Self.FK_Customer_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Decision_Company_Invoice_Company" Association="Self.FK_Decision_Company_Invoice_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Decision_Company_Invoice" EntitySet="Decision_Company_Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Decision_Company_Invoice_Decision" Association="Self.FK_Decision_Company_Invoice_Decision">
+      <End Role="Decision" EntitySet="Decision" />
+      <End Role="Decision_Company_Invoice" EntitySet="Decision_Company_Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Decision_Company_Invoice_InvoiceCategory" Association="Self.FK_Decision_Company_Invoice_InvoiceCategory">
+      <End Role="InvoiceCategory" EntitySet="InvoiceCategory" />
+      <End Role="Decision_Company_Invoice" EntitySet="Decision_Company_Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Decision_Company_Invoice_InvoiceTemplate" Association="Self.FK_Decision_Company_Invoice_InvoiceTemplate">
+      <End Role="InvoiceTemplate" EntitySet="InvoiceTemplate" />
+      <End Role="Decision_Company_Invoice" EntitySet="Decision_Company_Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_File_version_Files" Association="Self.FK_File_version_Files">
+      <End Role="Files" EntitySet="Files" />
+      <End Role="File_version" EntitySet="File_version" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileExtention_aspnet_Applications" Association="Self.FK_FileExtention_aspnet_Applications">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="FileExtension" EntitySet="FileExtension" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileExtention_aspnet_Users" Association="Self.FK_FileExtention_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="FileExtension" EntitySet="FileExtension" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileExtention_aspnet_Users1" Association="Self.FK_FileExtention_aspnet_Users1">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="FileExtension" EntitySet="FileExtension" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Files_Folders" Association="Self.FK_Files_Folders">
+      <End Role="Folders" EntitySet="Folders" />
+      <End Role="Files" EntitySet="Files" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileThumbnail_aspnet_Users" Association="Self.FK_FileThumbnail_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="FileThumbnail" EntitySet="FileThumbnail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileThumbnail_aspnet_Users1" Association="Self.FK_FileThumbnail_aspnet_Users1">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="FileThumbnail" EntitySet="FileThumbnail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Folder_access_AccessList" Association="Self.FK_Folder_access_AccessList">
+      <End Role="AccessList" EntitySet="AccessList" />
+      <End Role="Folder_access" EntitySet="Folder_access" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Folder_access_Folders" Association="Self.FK_Folder_access_Folders">
+      <End Role="Folders" EntitySet="Folders" />
+      <End Role="Folder_access" EntitySet="Folder_access" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Folders_Nodes" Association="Self.FK_Folders_Nodes">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Folders" EntitySet="Folders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceTemplate_InvoiceCategory" Association="Self.FK_InvoiceTemplate_InvoiceCategory">
+      <End Role="InvoiceCategory" EntitySet="InvoiceCategory" />
+      <End Role="InvoiceTemplate" EntitySet="InvoiceTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Log_aspnet_Users" Association="Self.FK_Log_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Log" EntitySet="Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Master_Category_Metadata_Template" Association="Self.FK_Master_Category_Metadata_Template">
+      <End Role="Metadata_Template" EntitySet="Metadata_Template" />
+      <End Role="Catalog_Master" EntitySet="Catalog_Master" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Master_Category_Taxonomy_Term" Association="Self.FK_Master_Category_Taxonomy_Term">
+      <End Role="Taxonomy_Term" EntitySet="Taxonomy_Term" />
+      <End Role="Catalog_Master" EntitySet="Catalog_Master" />
+    </AssociationSet>
+    <AssociationSet Name="FK_mdm_Core_Metadata_Field_In_Template_mdm_Core_Metadata_Field" Association="Self.FK_mdm_Core_Metadata_Field_In_Template_mdm_Core_Metadata_Field">
+      <End Role="Metadata_Field" EntitySet="Metadata_Field" />
+      <End Role="Metadata_Field_Template_Relationship" EntitySet="Metadata_Field_Template_Relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_mdm_Core_Metadata_Field_In_Template_mdm_Core_Metadata_Template" Association="Self.FK_mdm_Core_Metadata_Field_In_Template_mdm_Core_Metadata_Template">
+      <End Role="Metadata_Template" EntitySet="Metadata_Template" />
+      <End Role="Metadata_Field_Template_Relationship" EntitySet="Metadata_Field_Template_Relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Media_Programmes_aspnet_Organizations" Association="Self.FK_Media_Programmes_aspnet_Organizations">
+      <End Role="aspnet_Organizations" EntitySet="aspnet_Organizations" />
+      <End Role="Media_Programmes" EntitySet="Media_Programmes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Metadata_Nodetype_Metadata" Association="Self.FK_Metadata_Nodetype_Metadata">
+      <End Role="Metadata" EntitySet="Metadata" />
+      <End Role="Metadata_Nodetype" EntitySet="Metadata_Nodetype" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Metadata_Nodetype_Node_type" Association="Self.FK_Metadata_Nodetype_Node_type">
+      <End Role="Node_type" EntitySet="Node_type" />
+      <End Role="Metadata_Nodetype" EntitySet="Metadata_Nodetype" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Metadata_Term_Metadata_Field" Association="Self.FK_Metadata_Term_Metadata_Field">
+      <End Role="Metadata_Field" EntitySet="Metadata_Field" />
+      <End Role="Catalog_Item_Attribute" EntitySet="Catalog_Item_Attribute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Navigation_Navigation" Association="Self.FK_Navigation_Navigation">
+      <End Role="Navigation" EntitySet="Navigation" />
+      <End Role="Navigation1" EntitySet="Navigation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Navigation_Role_Navigation" Association="Self.FK_Navigation_Role_Navigation">
+      <End Role="Navigation" EntitySet="Navigation" />
+      <End Role="Navigation_Role" EntitySet="Navigation_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_access_AccessList" Association="Self.FK_Node_access_AccessList">
+      <End Role="AccessList" EntitySet="AccessList" />
+      <End Role="Node_access" EntitySet="Node_access" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_access_Nodes" Association="Self.FK_Node_access_Nodes">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Node_access" EntitySet="Node_access" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_ExploitationExt_Media_Programmes" Association="Self.FK_Node_ExploitationExt_Media_Programmes">
+      <End Role="Media_Programmes" EntitySet="Media_Programmes" />
+      <End Role="Node_WorkFlowExt" EntitySet="Node_WorkFlowExt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_files_Files" Association="Self.FK_Node_files_Files">
+      <End Role="Files" EntitySet="Files" />
+      <End Role="Node_files" EntitySet="Node_files" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_files_Nodes" Association="Self.FK_Node_files_Nodes">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Node_files" EntitySet="Node_files" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_metadata_Metadata" Association="Self.FK_Node_metadata_Metadata">
+      <End Role="Metadata" EntitySet="Metadata" />
+      <End Role="Node_metadata" EntitySet="Node_metadata" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_metadata_Nodes" Association="Self.FK_Node_metadata_Nodes">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Node_metadata" EntitySet="Node_metadata" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_ref_Nodes" Association="Self.FK_Node_ref_Nodes">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Node_ref" EntitySet="Node_ref" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_ref_Nodes1" Association="Self.FK_Node_ref_Nodes1">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Node_ref" EntitySet="Node_ref" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_tags_Nodes" Association="Self.FK_Node_tags_Nodes">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Node_tags" EntitySet="Node_tags" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_tags_Taxonomy_Terms" Association="Self.FK_Node_tags_Taxonomy_Terms">
+      <End Role="Taxonomy_Term" EntitySet="Taxonomy_Term" />
+      <End Role="Node_tags" EntitySet="Node_tags" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_WorkFlow_Nodes" Association="Self.FK_Node_WorkFlow_Nodes">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Node_WorkFlow" EntitySet="Node_WorkFlow" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_WorkFlow_TransitionHistory_Nodes" Association="Self.FK_Node_WorkFlow_TransitionHistory_Nodes">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Node_WorkFlow_TransitionHistory" EntitySet="Node_WorkFlow_TransitionHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Node_WorkFlowExt_Node_WorkFlow" Association="Self.FK_Node_WorkFlowExt_Node_WorkFlow">
+      <End Role="Node_WorkFlow" EntitySet="Node_WorkFlow" />
+      <End Role="Node_WorkFlowExt" EntitySet="Node_WorkFlowExt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nodes_Node_type" Association="Self.FK_Nodes_Node_type">
+      <End Role="Node_type" EntitySet="Node_type" />
+      <End Role="Nodes" EntitySet="Nodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nodes_Nodes" Association="Self.FK_Nodes_Nodes">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Nodes1" EntitySet="Nodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Invoice_Invoice" Association="Self.FK_Product_Invoice_Invoice">
+      <End Role="Invoice" EntitySet="Invoice" />
+      <End Role="Product_Invoice" EntitySet="Product_Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Company" Association="Self.FK_Products_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Publish_Invoice_Template_Publish_Announcement" Association="Self.FK_Publish_Invoice_Template_Publish_Announcement">
+      <End Role="Publish_Announcement" EntitySet="Publish_Announcement" />
+      <End Role="Publish_Invoice_Template" EntitySet="Publish_Invoice_Template" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recent_files_Files" Association="Self.FK_Recent_files_Files">
+      <End Role="Files" EntitySet="Files" />
+      <End Role="Recent_files" EntitySet="Recent_files" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recent_folders_Folders" Association="Self.FK_Recent_folders_Folders">
+      <End Role="Folders" EntitySet="Folders" />
+      <End Role="Recent_folders" EntitySet="Recent_folders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Right_Right" Association="Self.FK_Right_Right">
+      <End Role="Right" EntitySet="Right" />
+      <End Role="Right1" EntitySet="Right" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Right_Role_aspnet_Roles" Association="Self.FK_Right_Role_aspnet_Roles">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="Right_Role" EntitySet="Right_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Right_Role_aspnet_Roles_1" Association="Self.FK_Right_Role_aspnet_Roles_1">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="idm_RightsInRole" EntitySet="idm_RightsInRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Right_Role_Right" Association="Self.FK_Right_Role_Right">
+      <End Role="Right" EntitySet="Right" />
+      <End Role="Right_Role" EntitySet="Right_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RightsInRole_Rights_1" Association="Self.FK_RightsInRole_Rights_1">
+      <End Role="idm_Right" EntitySet="idm_Right" />
+      <End Role="idm_RightsInRole" EntitySet="idm_RightsInRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RightsOfUser_aspnet_Users" Association="Self.FK_RightsOfUser_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="idm_RightsOfUser" EntitySet="idm_RightsOfUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RightsOfUser_Rights" Association="Self.FK_RightsOfUser_Rights">
+      <End Role="idm_Right" EntitySet="idm_Right" />
+      <End Role="idm_RightsOfUser" EntitySet="idm_RightsOfUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Taxonomy_Terms_Taxonomy_Vocabularies" Association="Self.FK_Taxonomy_Terms_Taxonomy_Vocabularies">
+      <End Role="Taxonomy_Vocabulary" EntitySet="Taxonomy_Vocabulary" />
+      <End Role="Taxonomy_Term" EntitySet="Taxonomy_Term" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workflow_Document_aspnet_Users" Association="Self.FK_Workflow_Document_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Workflow_Document" EntitySet="Workflow_Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workflow_Document_aspnet_Users1" Association="Self.FK_Workflow_Document_aspnet_Users1">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Workflow_Document" EntitySet="Workflow_Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workflow_DocumentTransitionHistory_aspnet_Users" Association="Self.FK_Workflow_DocumentTransitionHistory_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Workflow_DocumentTransitionHistory" EntitySet="Workflow_DocumentTransitionHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workflow_DocumentTransitionHistory_Workflow_Document" Association="Self.FK_Workflow_DocumentTransitionHistory_Workflow_Document">
+      <End Role="Workflow_Document" EntitySet="Workflow_Document" />
+      <End Role="Workflow_DocumentTransitionHistory" EntitySet="Workflow_DocumentTransitionHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workflow_Employee_Workflow_StructDivision" Association="Self.FK_Workflow_Employee_Workflow_StructDivision">
+      <End Role="Workflow_StructDivision" EntitySet="Workflow_StructDivision" />
+      <End Role="Workflow_Employee" EntitySet="Workflow_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workflow_EmployeeRole_Workflow_Employee" Association="Self.FK_Workflow_EmployeeRole_Workflow_Employee">
+      <End Role="Workflow_Employee" EntitySet="Workflow_Employee" />
+      <End Role="Workflow_EmployeeRole" EntitySet="Workflow_EmployeeRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workflow_EmployeeRole_Workflow_Roles" Association="Self.FK_Workflow_EmployeeRole_Workflow_Roles">
+      <End Role="Workflow_Roles" EntitySet="Workflow_Roles" />
+      <End Role="Workflow_EmployeeRole" EntitySet="Workflow_EmployeeRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workflow_StructDivision_Workflow_StructDivision" Association="Self.FK_Workflow_StructDivision_Workflow_StructDivision">
+      <End Role="Workflow_StructDivision" EntitySet="Workflow_StructDivision" />
+      <End Role="Workflow_StructDivision1" EntitySet="Workflow_StructDivision" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkflowScheme_Document_Workflow_Document" Association="Self.FK_WorkflowScheme_Document_Workflow_Document">
+      <End Role="Workflow_Document" EntitySet="Workflow_Document" />
+      <End Role="WorkflowScheme_Document" EntitySet="WorkflowScheme_Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkflowScheme_Document_WorkflowScheme" Association="Self.FK_WorkflowScheme_Document_WorkflowScheme">
+      <End Role="WorkflowScheme" EntitySet="WorkflowScheme" />
+      <End Role="WorkflowScheme_Document" EntitySet="WorkflowScheme_Document" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
