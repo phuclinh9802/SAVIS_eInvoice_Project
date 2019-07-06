@@ -1,0 +1,67 @@
+# PROJECT STRUCTURE
+
+    eInvoice.ERP.API  
+        --> V1 
+            --> Controllers // API Controller
+        --> ProjectServiceCollectionExtensions.cs // Register service DI
+        --> appsettings.json // Config app
+    eInvoice.ERP.Business  
+        --> V1  
+            --> Core // Core handlers
+            --> Logic // Logic handlers 
+    eInvoice.ERP.Data  
+        --> V1  
+            --> EFDataAccess
+                --> Context // Model Table Class
+                --> Repositories // Repositories
+            --> Utils // Common function
+    eInvoice.ERP.XUnitTest 
+        --> API // Test function
+
+## How to create new table
+
+### Step 1: Prepare model
+
+1. Create Model table in `eInvoice.ERP.Data > V1 > EFDataAccess > Context`
+
+2. Registion model in class `DataContext`
+
+### Step 2: Create database update version
+
+PowerShell:   `dotnet ef --startup-project ..\eInvoice.ERP.API\ migrations add <MigateName>`
+
+NugetConsole: `Add-Migration InitDatabase <MigateName>`
+
+### Step 3: Apply update
+
+
+PowerShell:   `dotnet ef --startup-project ..\eInvoice.ERP.API\ database update`
+
+NugetConsole: `Add-Migration InitDatabase  Update-Database`
+
+## How to write a controler
+
+### Step1: Create logic handler
+
+Create logic handler,interface in `eInvoice.ERP.Business > V1 > Logic`
+
+### Step2: Register service DI
+
+Register service DI in `eInvoice.ERP.API > ProjectServiceCollectionExtensions`
+
+### Step3: Create Controler
+
+Create controler  `eInvoice.ERP.API > V1 > Controllers`
+
+## How to write a XunitTest
+
+> XUnitTest Intergration will use a InMemoryDataBase so Primary Database will not affected
+
+### Step1: Create bootstrap handler
+
+Create bootstrap handler to prepare data for test function
+
+### Step2: Create XUnitTest handler
+
+Create XUnitTest handler in `eInvoice.ERP.XUnitTest > API`
+ 
